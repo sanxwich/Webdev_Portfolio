@@ -3,43 +3,112 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* FONTS */
+
 @font-face {
   font-family: "DIN";
   src: url(/fonts/DIN\ Regular.ttf);
 }
+
 @font-face {
   font-family: "DIN-bold";
   src: url(/fonts/DIN\ Bold.otf);
 }
-/*DESKTOP*/
+
+/* LANDING SECTION */
+
 .landing-cont {
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
-.content h1 {
-  font-family: "DIN-bold";
-  font-size: 64px;
-  margin-bottom: 40px;
-}
-.content h2 {
-  font-family: "DIN-bold";
-  font-size: 32px;
-  text-align: center;
-  margin-top: 40px;
-}
+
+/* VIDEO BACKGROUND */
+
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ensures the video fills without distortion */
+  object-fit: cover;
   z-index: -1;
 }
 
-/*MOBILE*/
-@media (min-width: 390px) {
+/* TEXT CONTENT */
+
+.content {
+  position: absolute;
+  z-index: 2;
+
+  transform: rotate(-25deg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 300px;
+}
+
+.content h1 {
+  font-family: "DIN-bold";
+  font-size: 64px;
+  color: white;
+  user-select: none;
+  letter-spacing: 4px;
+
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+.content h2 {
+  font-family: "DIN-bold";
+  font-size: 32px;
+  color: white;
+  letter-spacing: 2px;
+
+  text-shadow:
+    0 0 10px rgba(0, 0, 0, 0.8),
+    0 0 25px rgba(0, 0, 0, 0.6);
+}
+
+/* FLOAT ANIMATION */
+@keyframes float {
+  0% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+
+  50% {
+    transform: rotate(-20deg) translateY(-10px);
+  }
+
+  100% {
+    transform: rotate(-20deg) translateY(0px);
+  }
+}
+.content {
+  animation: float 6s ease-in-out infinite;
+}
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
 }
