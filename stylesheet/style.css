@@ -2,27 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-}
-
-/* FONTS */
-
+} /* FONTS */
 @font-face {
   font-family: "DIN";
   src: url(/fonts/DIN\ Regular.ttf);
 }
-
 @font-face {
   font-family: "DIN-bold";
   src: url(/fonts/DIN\ Bold.otf);
 }
-
 /* LANDING SECTION */
-
 .landing-cont {
   width: 100%;
   height: 100vh;
@@ -32,9 +21,7 @@ body {
   position: relative;
   overflow: hidden;
 }
-
 /* VIDEO BACKGROUND */
-
 .background-video {
   position: absolute;
   top: 0;
@@ -44,71 +31,195 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-
 /* TEXT CONTENT */
-
 .content {
   position: absolute;
   z-index: 2;
-
   transform: rotate(-25deg);
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-
-  height: 300px;
+  height: 350px;
 }
-
 .content h1 {
   font-family: "DIN-bold";
-  font-size: 64px;
+  font-size: clamp(28px, 6vw, 64px);
   color: white;
   user-select: none;
   letter-spacing: 4px;
+  color: #ffffff;
+  text-shadow: 0 0 8px #a0a0a0;
 
   text-shadow:
     0 0 10px rgba(0, 0, 0, 0.8),
     0 0 25px rgba(0, 0, 0, 0.6);
 }
-
 .content h2 {
   font-family: "DIN-bold";
-  font-size: 32px;
+  font-size: clamp(16px, 3vw, 32px);
   color: white;
+  user-select: none;
   letter-spacing: 2px;
-
   text-shadow:
     0 0 10px rgba(0, 0, 0, 0.8),
     0 0 25px rgba(0, 0, 0, 0.6);
+}
+/* SHARED ANIMATION */
+@keyframes warp-shimmer {
+  0% {
+    opacity: 0.7;
+    transform: scaleX(3) translateX(-10px) skewX(20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleX(4.5) translateX(-18px) skewX(20deg);
+  }
+}
+
+/* MAIN TRAIL (D) */
+.trail {
+  position: relative;
+  display: inline-block;
+}
+
+.trail::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #fff;
+  filter: blur(1px);
+  opacity: 1;
+
+  /* Combined all your colors into one shadow stack for a constant, thick look */
+  text-shadow:
+    -5px 0 10px #ffd700,
+    -15px 0 25px #ff8c00,
+    -35px 0 45px #ff69b4,
+    -60px 0 70px #ff00ff;
+
+  text-shadow:
+    -5px 0 10px #ffff00,
+    -15px 0 20px #ffa500,
+    -30px 0 35px #ff66cc,
+    -50px 0 50px #ff00ff;
+
+  animation: warp-shimmer 2s infinite alternate;
+}
+
+/* SUBTITLE TRAIL (S) */
+.trail_S {
+  position: relative;
+  display: inline-block;
+}
+
+.trail_S::before {
+  content: attr(data-text); /* Added this so the S trail appears */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  color: #fff;
+  filter: blur(1px);
+  opacity: 0.8;
+
+  /* Slightly smaller scale for the subtitle */
+  text-shadow:
+    -5px 0 10px #ffd700,
+    -15px 0 25px #ff8c00,
+    -35px 0 45px #ff69b4,
+    -60px 0 70px #ff00ff;
+
+  text-shadow:
+    -5px 0 10px #ffff00,
+    -15px 0 20px #ffa500,
+    -30px 0 35px #ff66cc,
+    -50px 0 50px #ff00ff;
+
+  animation: warp-shimmer 2s infinite alternate;
+}
+@keyframes warp-shimmer {
+  0% {
+    opacity: 0.6;
+    transform: scaleX(3.5) translateX(-8px) skewX(20deg);
+    filter: blur(12px);
+  }
+  100% {
+    opacity: 0.9;
+    transform: scaleX(5) translateX(-15px) skewX(20deg);
+    filter: blur(18px);
+  }
 }
 
 /* FLOAT ANIMATION */
 @keyframes float {
   0% {
-    transform: rotate(-20deg) translateY(0px);
+    transform: rotate(-25deg) translateY(0px);
   }
-
   50% {
-    transform: rotate(-20deg) translateY(-10px);
+    transform: rotate(-25deg) translateY(-10px);
   }
-
   100% {
-    transform: rotate(-20deg) translateY(0px);
+    transform: rotate(-25deg) translateY(0px);
   }
 }
 .content {
-  animation: float 6s ease-in-out infinite;
+  animation: float 10s ease-in-out infinite;
 }
 /* MOBILE */
-
 @media (max-width: 768px) {
-  .content h1 {
-    font-size: 36px;
+  .content {
+    width: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    white-space: nowrap;
   }
 
+  .content h1,
   .content h2 {
-    font-size: 20px;
+    margin: 0;
+    text-align: center;
+  }
+  .content h1 {
+    margin-left: 5rem;
+    font-size: 24px;
+  }
+  .background-video {
+    object-position: 60% center;
+  }
+
+  .trail::before {
+    transform: scaleX(2.5) translateX(-5px) skewX(15deg);
+    text-shadow:
+      -3px 0 8px #ffd700,
+      -10px 0 15px #ff8c00,
+      -20px 0 25px #ff69b4,
+      -35px 0 35px #ff00ff;
+    filter: blur(2px);
+  }
+
+  .trail_S::before {
+    transform: scaleX(2) translateX(-3px) skewX(15deg);
+    text-shadow:
+      -2px 0 5px #ffd700,
+      -6px 0 10px #ff8c00,
+      -12px 0 18px #ff69b4,
+      -20px 0 25px #ff00ff;
+  }
+
+  /* Adjust the animation for mobile constraints */
+  @keyframes warp-shimmer {
+    0% {
+      transform: scaleX(2) translateX(-5px) skewX(15deg);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scaleX(3) translateX(-10px) skewX(15deg);
+      opacity: 1;
+    }
   }
 }
