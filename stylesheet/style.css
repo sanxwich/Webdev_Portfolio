@@ -11,6 +11,9 @@
   font-family: "DIN-bold";
   src: url(/fonts/DIN\ Bold.otf);
 }
+body {
+  cursor: url("/cursors/Normal_page_01-removebg-preview.png"), auto;
+}
 /* LANDING SECTION */
 .landing-cont {
   width: 100%;
