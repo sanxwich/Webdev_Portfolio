@@ -43,7 +43,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 350px;
+  height: 400px;
 }
 .content h1 {
   font-family: "DIN-bold";
@@ -171,6 +171,103 @@ body {
 .content {
   animation: float 10s ease-in-out infinite;
 }
+/*navbar*/
+.logo img {
+  width: 103px;
+}
+
+.navbar {
+  width: 821px;
+  height: 94px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; /* logo left, links right */
+  align-items: center;
+  padding: 12px 20px;
+  background-color: rgba(17, 24, 39, 0.7);
+  border-radius: 8px;
+
+  position: absolute; /* or fixed if you want it always visible */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+}
+
+.nav_links a {
+  text-decoration: none;
+  color: #fea2ba;
+  font-family: "DIN-bold";
+  font-size: 20px;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+  .nav_links a {
+    display: inline-flex; /* 🔥 important */
+    align-items: center; /* vertical center */
+    height: 40px; /* match button height */
+  }
+}
+
+.nav_links a:hover {
+  color: #e64670;
+}
+
+/* Animated contact button */
+.contact-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  padding: 0 1.5rem;
+  border-radius: 500px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.05rem;
+  text-decoration: none;
+  font-family: inherit;
+  color: ghostwhite;
+  background: #b22222;
+  overflow: hidden;
+  transition: color 0.4s;
+}
+
+.contact-btn span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+}
+
+.contact-btn:hover span {
+  color: black;
+}
+
+.contact-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10%;
+  width: 120%;
+  height: 100%;
+  background: #7efaff;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  z-index: 0;
+}
+
+.contact-btn:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .content {
