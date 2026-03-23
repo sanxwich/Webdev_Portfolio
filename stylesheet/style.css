@@ -175,96 +175,91 @@ body {
 .logo img {
   width: 103px;
 }
-
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+}
 .navbar {
   width: 821px;
   height: 94px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* logo left, links right */
+  justify-content: space-between; /* logo left, buttons right */
   align-items: center;
   padding: 12px 20px;
   background-color: rgba(17, 24, 39, 0.7);
   border-radius: 8px;
-
-  position: absolute; /* or fixed if you want it always visible */
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
 }
 
-.nav_links {
-  list-style: none;
+.navbar-btns {
   display: flex;
-  gap: 1.5rem;
+  gap: 10px; /* spacing between buttons */
+}
+
+.navbar-btns button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
   margin: 0;
-  padding: 0;
-  align-items: center;
-}
-
-.nav_links a {
-  text-decoration: none;
-  color: #fea2ba;
-  font-family: "DIN-bold";
-  font-size: 20px;
-  letter-spacing: 1px;
-  transition: color 0.3s;
-  .nav_links a {
-    display: inline-flex; /* 🔥 important */
-    align-items: center; /* vertical center */
-    height: 40px; /* match button height */
-  }
-}
-
-.nav_links a:hover {
-  color: #e64670;
-}
-
-/* Animated contact button */
-.contact-btn {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  height: 40px;
-  padding: 0 1.5rem;
-  border-radius: 500px;
+  font-family: "DIN";
   font-weight: 700;
   font-size: 17px;
+  position: relative;
+  display: inline-block;
   letter-spacing: 0.05rem;
-  text-decoration: none;
-  font-family: inherit;
-  color: ghostwhite;
-  background: #b22222;
+  border-radius: 500px;
   overflow: hidden;
+  background: #b22222; /* default background */
+  color: #ffffff;
   transition: color 0.4s;
 }
 
-.contact-btn span {
+.navbar-btns button span {
   position: relative;
   z-index: 10;
-  transition: color 0.4s;
 }
 
-.contact-btn:hover span {
+.navbar-btns button:hover span {
   color: black;
 }
 
-.contact-btn::before {
-  content: "";
+.navbar-btns button::before,
+.navbar-btns button::after {
   position: absolute;
   top: 0;
-  left: -10%;
-  width: 120%;
+  left: 0;
+  width: 100%;
   height: 100%;
-  background: #7efaff;
-  transform: skew(30deg);
-  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
   z-index: 0;
 }
 
-.contact-btn:hover::before {
+.navbar-btns button::before {
+  content: "";
+  background: #7ec3ed;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.navbar-btns button:hover::before {
   transform: translate3d(100%, 0, 0);
 }
 
@@ -321,5 +316,32 @@ body {
       transform: scaleX(3) translateX(-10px) skewX(15deg);
       opacity: 1;
     }
+  }
+  /*navbar*/
+  .hamburger {
+    display: flex; /* show hamburger */
+  }
+
+  .navbar-btns {
+    display: none; /* hide menu initially */
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    background-color: rgba(17, 24, 39, 0.95);
+    padding: 1rem;
+    position: absolute;
+    top: 94px; /* below navbar */
+    left: 0;
+  }
+
+  .navbar-btns.active {
+    display: flex; /* show when toggled */
+  }
+
+  .navbar-btns button {
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    padding: 0.7rem 1rem;
   }
 }
