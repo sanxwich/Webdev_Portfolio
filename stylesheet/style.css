@@ -554,6 +554,23 @@ body {
   position: relative;
   z-index: 1;
 }
+
+/*Project page*/
+.projects {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(
+    135deg,
+    #0a0a1a 0%,
+    #0d1f3c 25%,
+    #0e3a5c 50%,
+    #1a6b7a 75%,
+    #1adbe4 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   .content {
