@@ -31,10 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     s6.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
 
   // Card tilt
-  const card = document.querySelector(".card");
+  const card = document.querySelector(".lightcone-card");
   if (card) {
-    let boxBoundingRect = card.getBoundingClientRect();
-    let boxCenter = boxBoundingRect.left + boxBoundingRect.width / 2;
     const card_blick = document.querySelectorAll(".card-blick");
 
     function changeBorderColor(border, value) {
@@ -44,6 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     document.addEventListener("mousemove", (e) => {
+      let boxBoundingRect = card.getBoundingClientRect();
+      let boxCenter = boxBoundingRect.left + boxBoundingRect.width / 2;
+
       let angle = Math.max(
         Math.min(
           21,
