@@ -32,3 +32,11 @@ s3.style.cssText = `
   box-shadow: ${bigStars};
   animation: animStar 150s linear infinite;
 `;
+
+const s4 = document.getElementById("stars4");
+const s5 = document.getElementById("stars5");
+const s6 = document.getElementById("stars6");
+
+s4.style.cssText = `width:1px;height:1px;position:absolute;box-shadow:${generateStars(700)};animation:animStar 50s linear infinite;`;
+s5.style.cssText = `width:2px;height:2px;position:absolute;box-shadow:${generateStars(200)};animation:animStar 100s linear infinite;`;
+s6.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;

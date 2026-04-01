@@ -308,6 +308,7 @@ body {
   padding-right: 25rem;
   box-sizing: border-box;
   overflow: hidden;
+  margin-bottom: 0;
 }
 
 /* Image */
@@ -442,6 +443,92 @@ body {
   to {
     transform: translateY(-2000px);
   }
+}
+/*skills*/
+.skills {
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #1b2a5c 0%,
+    #0e0e0e 100%
+  ); /* blends from aboutMe's bottom color */
+  color: white;
+  padding: 80px 100px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+
+.skills__subtitle {
+  color: #aaa;
+  font-size: 16px;
+  margin: 0 0 50px 0;
+}
+
+.skills__cards {
+  display: flex;
+  gap: 30px;
+}
+
+.skills__card {
+  flex: 1;
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+.skills__card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.skills__icon {
+  font-size: 32px;
+  background: #2a2040;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.skills__card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.skills__card p {
+  color: #ccc;
+  font-size: 15px;
+  margin: 0 0 15px 0;
+}
+
+.skills__card ul {
+  padding-left: 20px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #ccc;
+  font-size: 15px;
+}
+
+.skills__card ul li strong {
+  color: white;
+}
+.skills h2,
+.skills__subtitle,
+.skills__cards {
+  position: relative;
+  z-index: 1;
 }
 /* MOBILE */
 @media (max-width: 768px) {
