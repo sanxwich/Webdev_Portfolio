@@ -449,9 +449,22 @@
 .lightcone-container {
   margin-top: 30px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   perspective: 1000px;
   font-size: 0.7rem;
+  margin-right: 20px;
+}
+.lightcone_name h2 {
+  font-family: "DIN-bold";
+  color: #dbd3c1;
+  font-size: 1rem;
+  letter-spacing: 0.2em;
+  margin: 0;
+  margin-top: 50px;
+  padding-right: 50px;
+  text-align: center;
 }
 
 .lightcone-card {
