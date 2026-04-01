@@ -346,7 +346,26 @@ body {
   color: #7ecfff;
   text-decoration: none;
 }
+.icons_abt {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+  font-size: 32px;
+}
+.quote {
+  font-family: "DIN-bold";
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
 
+.author {
+  font-family: "DIN-bold";
+  font-weight: bold;
+  color: #b22222;
+  font-size: 20px;
+  margin-top: 10px;
+}
 /* Glitch span */
 .aboutMe span {
   position: relative;
@@ -462,13 +481,15 @@ body {
 .skills h2 {
   font-size: 40px;
   font-weight: 800;
+  font-family: "DIN-bold";
   margin: 0 0 10px 0;
 }
 
 .skills__subtitle {
   color: #aaa;
-  font-size: 16px;
+  font-size: 20px;
   margin: 0 0 50px 0;
+  font-family: "DIN";
 }
 
 .skills__cards {
@@ -502,13 +523,15 @@ body {
 .skills__card h3 {
   font-size: 22px;
   font-weight: 700;
+  font-family: "DIN-bold";
   margin: 0;
 }
 
 .skills__card p {
   color: #ccc;
-  font-size: 15px;
+  font-size: 20px;
   margin: 0 0 15px 0;
+  font-family: "DIN";
 }
 
 .skills__card ul {
@@ -519,6 +542,7 @@ body {
   gap: 10px;
   color: #ccc;
   font-size: 15px;
+  font-family: "DIN";
 }
 
 .skills__card ul li strong {
