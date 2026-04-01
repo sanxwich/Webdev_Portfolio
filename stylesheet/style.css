@@ -24,7 +24,18 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* VIDEO BACKGROUND */
+
+.landing-cont::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to bottom, transparent 0%, #000000 100%);
+  z-index: 1;
+  pointer-events: none;
+}
 .background-video {
   position: absolute;
   top: 0;
@@ -34,16 +45,16 @@ body {
   object-fit: cover;
   z-index: -1;
 }
-/* TEXT CONTENT */
 .content {
   position: absolute;
   z-index: 2;
-  transform: rotate(-25deg);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   height: 400px;
+  rotate: 25deg;
+  gap: 5px;
 }
 .content h1 {
   font-family: "DIN-bold";
@@ -67,17 +78,6 @@ body {
   text-shadow:
     0 0 10px rgba(0, 0, 0, 0.8),
     0 0 25px rgba(0, 0, 0, 0.6);
-}
-/* SHARED ANIMATION */
-@keyframes warp-shimmer {
-  0% {
-    opacity: 0.7;
-    transform: scaleX(3) translateX(-10px) skewX(20deg);
-  }
-  100% {
-    opacity: 1;
-    transform: scaleX(4.5) translateX(-18px) skewX(20deg);
-  }
 }
 
 /* MAIN TRAIL (D) */
@@ -111,7 +111,52 @@ body {
 
   animation: warp-shimmer 2s infinite alternate;
 }
+/* Spaceship blast-off from train */
 
+@keyframes spaceshipBlast {
+  0% {
+    opacity: 0;
+
+    transform: translateX(300%) translateY(150%) scale(0.8) rotate(-25deg);
+  }
+
+  40% {
+    opacity: 1;
+
+    transform: translateX(100%) translateY(-20%) scale(1.05) rotate(-10deg);
+  }
+
+  70% {
+    transform: translateX(20%) translateY(10%) scale(1.02) rotate(-50deg);
+  }
+  100% {
+    opacity: 1;
+
+    transform: translateX(0) translateY(0) scale(1) rotate(-25deg);
+  }
+}
+
+/* Apply to your main heading */
+
+.content h1 {
+  opacity: 0;
+  animation:
+    spaceshipBlast 3s ease-out forwards,
+    float 10s ease-in-out infinite;
+
+  animation-delay: 1s, 4s; /* blast first, float after */
+}
+/* Subtitle follows slightly later */
+
+.content h2 {
+  opacity: 0;
+
+  animation:
+    spaceshipBlast 3s ease-out forwards,
+    float 10s ease-in-out infinite;
+
+  animation-delay: 1s, 4s;
+}
 /* SUBTITLE TRAIL (S) */
 .trail_S {
   position: relative;
@@ -175,32 +220,18 @@ body {
 .logo img {
   width: 103px;
 }
-.hamburger {
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 25px;
-  height: 20px;
-  cursor: pointer;
-}
-.hamburger span {
-  display: block;
-  height: 3px;
-  width: 100%;
-  background: #fff;
-  border-radius: 2px;
-}
+
 .navbar {
   width: 821px;
   height: 94px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* logo left, buttons right */
+  justify-content: space-between;
   align-items: center;
   padding: 12px 20px;
   background-color: rgba(17, 24, 39, 0.7);
   border-radius: 8px;
-  position: absolute;
+  position: fixed; /* changed from absolute */
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -262,7 +293,156 @@ body {
 .navbar-btns button:hover::before {
   transform: translate3d(100%, 0, 0);
 }
+/* About me section */
+.aboutMe {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* make sure this is center, not flex-start */
+  gap: 40px;
+  position: relative;
+  background: linear-gradient(to top, #1b2a5c 0%, #000000 100%);
+  padding-left: 25rem;
+  padding-right: 25rem;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
+/* Image */
+.aboutMe__image img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Text block */
+.aboutMe__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.aboutMe__text p {
+  font-family: "DIN";
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+.aboutMe__text h3 {
+  font-family: "DIN-bold";
+  color: white;
+  font-size: 96px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.aboutMe__text a {
+  color: #7ecfff;
+  text-decoration: none;
+}
+
+/* Glitch span */
+.aboutMe span {
+  position: relative;
+  color: #e8a0ff; /* purple/pink like in your screenshot */
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
+  }
+  62% {
+    transform: translate(0, 0) skew(5deg);
+  }
+}
+
+.aboutMe span:before,
+.aboutMe span:after {
+  content: attr(title);
+  position: absolute;
+  left: 0;
+  color: #e8a0ff;
+  background: #0d1b3e; /* matches your dark blue bg */
+}
+
+.aboutMe span:before {
+  animation: glitchTop 1s linear infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+  2%,
+  64% {
+    transform: translate(2px, -2px);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
+  }
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
+  }
+}
+
+.aboutMe span:after {
+  animation: glitchBotom 1.5s linear infinite;
+  clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom {
+  2%,
+  64% {
+    transform: translate(-2px, 0);
+  }
+  4%,
+  60% {
+    transform: translate(-2px, 0);
+  }
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
+  }
+}
+/*stars*/
+#stars,
+#stars2,
+#stars3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Make sure content sits above stars */
+.aboutMe__image,
+.aboutMe__text {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2000px);
+  }
+}
 /* MOBILE */
 @media (max-width: 768px) {
   .content {
@@ -318,30 +498,16 @@ body {
     }
   }
   /*navbar*/
-  .hamburger {
-    display: flex; /* show hamburger */
-  }
-
-  .navbar-btns {
-    display: none; /* hide menu initially */
-    flex-direction: column;
-    gap: 0.5rem;
+  .navbar {
     width: 100%;
-    background-color: rgba(17, 24, 39, 0.95);
-    padding: 1rem;
-    position: absolute;
-    top: 94px; /* below navbar */
-    left: 0;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    border-radius: 0;
+    top: 0;
   }
-
-  .navbar-btns.active {
-    display: flex; /* show when toggled */
-  }
-
-  .navbar-btns button {
-    width: 100%;
-    text-align: center;
-    font-size: 15px;
-    padding: 0.7rem 1rem;
+  .logo img {
+    width: 80px;
+    margin-bottom: 10px;
   }
 }
