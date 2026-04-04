@@ -850,19 +850,6 @@
     translateZ(-13rem) perspective(10px);
 }
 
-/*stars*/
-#stars,
-#stars2,
-#stars3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 1px;
-  height: 1px;
-  z-index: 0;
-  pointer-events: none;
-}
-
 /* Make sure content sits above stars */
 .aboutMe__image,
 .aboutMe__text {
@@ -902,9 +889,8 @@
 .skills {
   width: 100%;
   background: linear-gradient(
-    to bottom,
-    #1b2a5c 0%,
-    #0e0e0e 100%
+    to top,
+    #1b2a5c 0%
   ); /* blends from aboutMe's bottom color */
   color: white;
   padding: 80px 100px;
@@ -989,7 +975,72 @@
   position: relative;
   z-index: 1;
 }
+/*hobbies*/
+.hobbies {
+  width: 100%;
+  background: linear-gradient(
+    to bottom,
+    #1b2a5c 0%,
+    #0e0e0e 100%
+  ); /* blends from aboutMe's bottom color */
+  color: white;
+  padding: 80px 100px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+.hobbies h2 {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: "DIN-bold";
+  margin: 0 0 10px 0;
+  position: relative;
+  z-index: 1;
+}
 
+.hobbies__subtitle {
+  color: #aaa;
+  font-size: 18px;
+  margin: 0 0 50px 0;
+  font-family: "DIN";
+  position: relative;
+  z-index: 1;
+}
+
+.hobbies__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.hobby__card {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+  padding: 28px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.3s ease;
+}
+.hobby__card p {
+  color: #ccc;
+  font-size: 14px;
+  font-family: "DIN";
+  margin: 0 0 14px 0;
+  line-height: 1.6;
+}
+.hobby__card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "DIN-bold";
+  margin: 0;
+  color: white;
+}
 /*Project page*/
 .projects {
   width: 100%;
@@ -1302,7 +1353,7 @@
   left: 75%;
   top: 60%;
   animation-duration: 22s;
-  animation-delay: -5s;
+  animation-delay: -4s;
   opacity: 1;
 }
 .bg-icon:nth-child(3) {
@@ -1318,7 +1369,7 @@
   left: 10%;
   top: 70%;
   animation-duration: 20s;
-  animation-delay: -8s;
+  animation-delay: -5s;
   opacity: 1;
 }
 .bg-icon:nth-child(5) {
@@ -1326,7 +1377,7 @@
   left: 80%;
   top: 70%;
   animation-duration: 20s;
-  animation-delay: -8s;
+  animation-delay: -3s;
   opacity: 1;
 }
 .bg-icon:nth-child(6) {
@@ -1342,7 +1393,7 @@
   left: 20%;
   top: 45%;
   animation-duration: 20s;
-  animation-delay: -8s;
+  animation-delay: -6s;
   opacity: 1;
 }
 .bg-icon:nth-child(8) {
@@ -1350,7 +1401,7 @@
   left: 5%;
   top: 30%;
   animation-duration: 20s;
-  animation-delay: -8s;
+  animation-delay: -7s;
   opacity: 1;
 }
 .bg-icon:nth-child(9) {

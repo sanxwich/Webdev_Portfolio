@@ -16,6 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const s4 = document.getElementById("stars4");
   const s5 = document.getElementById("stars5");
   const s6 = document.getElementById("stars6");
+  const s7 = document.getElementById("stars7");
+  const s8 = document.getElementById("stars8");
+  const s9 = document.getElementById("stars9");
 
   if (s1)
     s1.style.cssText = `width:1px;height:1px;position:absolute;box-shadow:${generateStars(700)};animation:animStar 50s linear infinite;`;
@@ -29,6 +32,12 @@ document.addEventListener("DOMContentLoaded", () => {
     s5.style.cssText = `width:2px;height:2px;position:absolute;box-shadow:${generateStars(200)};animation:animStar 100s linear infinite;`;
   if (s6)
     s6.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
+  if (s7)
+    s7.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
+  if (s8)
+    s8.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
+  if (s9)
+    s9.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
 
   // Card tilt
   const card = document.querySelector(".lightcone-card");
