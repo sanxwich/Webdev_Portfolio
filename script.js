@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Stars generation
   function generateStars(n) {
     let value = "";
     for (let i = 0; i < n; i++) {
@@ -39,7 +40,28 @@ document.addEventListener("DOMContentLoaded", () => {
   if (s9)
     s9.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
 
-  // Card tilt
+  // ✅ Footer stars — OUTSIDE the card if block
+  const footer = document.querySelector(".Footer");
+  if (footer) {
+    for (let i = 0; i < 30; i++) {
+      const s = document.createElement("div");
+      s.style.cssText = `
+        position: absolute;
+        border-radius: 50%;
+        background: #fff;
+        pointer-events: none;
+        z-index: 2;
+        width: ${Math.random() * 2 + 1}px;
+        height: ${Math.random() * 2 + 1}px;
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        animation: pulse-sigil ${Math.random() * 4 + 2}s ease ${Math.random() * 5}s infinite;
+      `;
+      footer.appendChild(s);
+    }
+  }
+
+  // Card tilt — stays inside its own if block
   const card = document.querySelector(".lightcone-card");
   if (card) {
     const card_blick = document.querySelectorAll(".card-blick");
@@ -53,7 +75,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.addEventListener("mousemove", (e) => {
       let boxBoundingRect = card.getBoundingClientRect();
       let boxCenter = boxBoundingRect.left + boxBoundingRect.width / 2;
-
       let angle = Math.max(
         Math.min(
           21,
