@@ -24,6 +24,9 @@
 .projects {
   cursor: url("/cursors/march\ \ cursor.png"), auto;
 }
+.Contact_page {
+  cursor: url("/cursors/Normal_page_01-removebg-preview.png"), auto;
+}
 /* LANDING SECTION */
 .landing-cont {
   width: 100%;
@@ -1559,7 +1562,7 @@
   left: 5%;
   animation-duration: 14s;
   animation-delay: 0s;
-  color: #7ec3ed;
+  color: #f9ea54;
 }
 .contact-rune:nth-child(2) {
   font-size: clamp(2rem, 5vw, 4.5rem);
