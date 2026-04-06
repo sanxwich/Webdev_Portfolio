@@ -1,3 +1,9 @@
+function scrollToSection(id) {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}
 document.addEventListener("DOMContentLoaded", () => {
   // Stars generation
   function generateStars(n) {
@@ -99,19 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   music.volume = 0.3;
 
-  // Start on first click anywhere on the page
-  function startMusicOnFirstClick() {
-    if (!isPlaying) {
-      music.play().catch((err) => console.log("Autoplay blocked:", err));
-      musicIcon.classList.remove("fa-music");
-      musicIcon.classList.add("fa-pause");
-      isPlaying = true;
-    }
-    document.removeEventListener("click", startMusicOnFirstClick);
-  }
-
-  document.addEventListener("click", startMusicOnFirstClick);
-
   // Toggle on music button click
   if (musicBtn) {
     musicBtn.addEventListener("click", (e) => {
@@ -130,4 +123,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+  document.querySelectorAll(".info-card[data-copy]").forEach((card) => {
+    card.addEventListener("click", () => {
+      const text = card.getAttribute("data-copy");
+      const toast = card.querySelector(".copy-toast");
+
+      navigator.clipboard
+        .writeText(text)
+        .then(() => {
+          toast.classList.add("show");
+          card.style.borderColor = "rgba(178, 34, 34, 0.6)";
+
+          setTimeout(() => {
+            toast.classList.remove("show");
+            card.style.borderColor = "";
+          }, 2000);
+        })
+        .catch((err) => console.log("Copy failed:", err));
+    });
+  });
 });

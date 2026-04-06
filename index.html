@@ -12,7 +12,7 @@
     />
   </head>
   <body>
-    <section class="landing-cont">
+    <section class="landing-cont" id="Home">
       <video autoplay loop muted plays-inline class="background-video">
         <source
           src="/video/Honkai_Star_Rail_-_Main_Loading_Screen_Live_Wallpaper_OST_720P.mp4"
@@ -29,11 +29,17 @@
           </a>
         </div>
         <div class="navbar-btns">
-          <button class="aboutMe-btn"><span>About Me</span></button>
-          <button class="project-btn"><span>Projects</span></button>
-          <button class="contact-btn"><span>Contacts</span></button>
+          <button class="aboutMe-btn" onclick="scrollToSection('about')">
+            <span>About Me</span>
+          </button>
+          <button class="project-btn" onclick="scrollToSection('projects')">
+            <span>Projects</span>
+          </button>
+          <button class="contact-btn" onclick="scrollToSection('contact')">
+            <span>Contacts</span>
+          </button>
           <button class="music-btn" id="music-button">
-            <span> <i class="fa-solid fa-music"></i></span>
+            <span><i class="fa-solid fa-music"></i></span>
           </button>
         </div>
       </nav>
@@ -54,7 +60,7 @@
       </div>
     </section>
     <main>
-      <section class="aboutMe">
+      <section class="aboutMe" id="about">
         <div id="stars"></div>
         <div id="stars2"></div>
         <div id="stars3"></div>
@@ -311,7 +317,7 @@
       </section>
     </main>
     <main>
-      <section class="projects">
+      <section class="Projects" id="projects">
         <div class="background-icons">
           <img
             src="/images/Ability_Freezing_Beauty.png"
@@ -473,7 +479,7 @@
         </div>
       </section>
     </main>
-    <section class="Contact_page">
+    <section class="Contact_page" id="contact">
       <div class="contact-runes">
         <div class="contact-rune">Amphoreus</div>
         <div class="contact-rune">ORONYX</div>
@@ -494,7 +500,7 @@
         <h1>Contact <span style="color: #b22222">Me</span></h1>
         <p class="subtitle">A fateful encounter, wouldn't you say?</p>
         <div class="info-cards">
-          <div class="info-card">
+          <div class="info-card" data-copy="bartolabacdave_710@gmail.com">
             <div class="info-icon">
               <i class="fa-solid fa-envelope" style="color: #e64670"></i>
             </div>
@@ -502,13 +508,15 @@
               <div class="info-label">Email</div>
               <div class="info-value">bartolabacdave_710@gmail.com</div>
             </div>
+            <span class="copy-toast">Copied!</span>
           </div>
+
           <div class="info-card">
             <div class="info-icon">
               <i class="fa-brands fa-github" style="color: #e64670"></i>
             </div>
             <div>
-              <div class="info-label">Gitbhub</div>
+              <div class="info-label">Github</div>
               <div class="info-value">
                 <a href="https://github.com/sanxwich"
                   >https://github.com/sanxwich</a
@@ -516,7 +524,8 @@
               </div>
             </div>
           </div>
-          <div class="info-card">
+
+          <div class="info-card" data-copy="sanxwich">
             <div class="info-icon">
               <i class="fa-brands fa-discord" style="color: #e64670"></i>
             </div>
@@ -524,6 +533,7 @@
               <div class="info-label">Discord</div>
               <div class="info-value">sanxwich</div>
             </div>
+            <span class="copy-toast">Copied!</span>
           </div>
         </div>
 
@@ -553,7 +563,7 @@
         <div>
           <div class="footer-col-title">Navigate</div>
           <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
+            <li><a href="#home" onclick="scrollToSection('Home')">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contacts</a></li>
@@ -592,10 +602,10 @@
 
       <div class="footer-bottom">
         <div class="footer-copy">
-          © 2025 <span>Dave Bartolabac</span>. All rights reserved.
+          © 2026 <span>Dave Bartolabac</span>. All rights reserved.
         </div>
         <div class="footer-path">
-          @2023 <span>Honkai: Star Rail</span>. All rights reserved.
+          @ 2023 <span>Honkai: Star Rail</span>. All rights reserved.
         </div>
       </div>
     </footer>

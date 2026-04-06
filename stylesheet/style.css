@@ -15,6 +15,7 @@
   font-family: "Cinzel";
   src: url(/fonts/Cinzel-VariableFont_wght.ttf);
 }
+/*cursors*/
 .Footer,
 .hobbies,
 .navbar,
@@ -23,12 +24,13 @@
 .skills {
   cursor: url("/cursors/cursor.png"), auto;
 }
-.projects {
+.Projects {
   cursor: url("/cursors/march\ \ cursor.png"), auto;
 }
 .Contact_page {
   cursor: url("/cursors/Normal_page_01-removebg-preview.png"), auto;
 }
+
 /* LANDING SECTION */
 .landing-cont {
   width: 100%;
@@ -235,6 +237,9 @@
   animation: float 10s ease-in-out infinite;
 }
 /*navbar*/
+html {
+  scroll-behavior: smooth;
+}
 .logo img {
   width: 103px;
 }
@@ -1062,7 +1067,7 @@
   width: fit-content;
 }
 /*Project page*/
-.projects {
+.Projects {
   width: 100%;
   min-height: 100vh;
   background: linear-gradient(135deg, #fce4f3 0%, #e8f4ff 40%, #f0e8ff 100%);
@@ -1645,6 +1650,26 @@
     border-color 0.3s,
     background 0.3s;
   animation: fade-in 0.6s ease both;
+  cursor: pointer;
+  position: relative;
+}
+.copy-toast {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #b22222;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+}
+
+.copy-toast.show {
+  opacity: 1;
 }
 .info-card:hover {
   border-color: rgba(232, 48, 90, 0.45);
