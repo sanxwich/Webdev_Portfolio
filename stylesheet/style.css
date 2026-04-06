@@ -15,7 +15,8 @@
   font-family: "Cinzel";
   src: url(/fonts/Cinzel-VariableFont_wght.ttf);
 }
-.hobbies .navbar,
+.hobbies,
+.navbar,
 .landing-cont,
 .aboutMe,
 .skills {
