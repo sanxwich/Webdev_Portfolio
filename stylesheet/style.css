@@ -311,6 +311,10 @@
 .navbar-btns button:hover::before {
   transform: translate3d(100%, 0, 0);
 }
+.music-btn.playing .fa-pause {
+  animation: spin-slow 3s linear infinite;
+}
+
 /* About me section */
 .aboutMe {
   width: 100%;
@@ -1621,6 +1625,7 @@
     opacity: 0.6;
   }
 }
+
 /* Info cards */
 .info-cards {
   display: flex;

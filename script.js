@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (s9)
     s9.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
 
-  // ✅ Footer stars — OUTSIDE the card if block
+  // Footer stars
   const footer = document.querySelector(".Footer");
   if (footer) {
     for (let i = 0; i < 30; i++) {
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Card tilt — stays inside its own if block
+  // Card tilt
   const card = document.querySelector(".lightcone-card");
   if (card) {
     const card_blick = document.querySelectorAll(".card-blick");
@@ -89,6 +89,45 @@ document.addEventListener("DOMContentLoaded", () => {
       let pos = 50 + (angle / 21) * 50;
       changeBorderColor("left", pos);
       changeBorderColor("right", pos);
+    });
+  }
+  // Music control
+  const music = document.getElementById("bg-music");
+  const musicBtn = document.getElementById("music-button");
+  const musicIcon = musicBtn.querySelector("i");
+  let isPlaying = false;
+
+  music.volume = 0.3;
+
+  // Start on first click anywhere on the page
+  function startMusicOnFirstClick() {
+    if (!isPlaying) {
+      music.play().catch((err) => console.log("Autoplay blocked:", err));
+      musicIcon.classList.remove("fa-music");
+      musicIcon.classList.add("fa-pause");
+      isPlaying = true;
+    }
+    document.removeEventListener("click", startMusicOnFirstClick);
+  }
+
+  document.addEventListener("click", startMusicOnFirstClick);
+
+  // Toggle on music button click
+  if (musicBtn) {
+    musicBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent triggering the document click above
+
+      if (isPlaying) {
+        music.pause();
+        musicIcon.classList.remove("fa-pause");
+        musicIcon.classList.add("fa-music");
+        isPlaying = false;
+      } else {
+        music.play().catch((err) => console.log("Autoplay blocked:", err));
+        musicIcon.classList.remove("fa-music");
+        musicIcon.classList.add("fa-pause");
+        isPlaying = true;
+      }
     });
   }
 });
