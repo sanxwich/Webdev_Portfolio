@@ -1524,10 +1524,11 @@ html {
 
 .Contact_page h1 {
   font-family: "DIN-bold", serif;
-  font-size: clamp(3rem, 5vw, 4.5rem);
   font-weight: 300;
   line-height: 1.05;
   color: #fff;
+  font-size: clamp(2rem, 8vw, 100px);
+  white-space: nowrap;
 }
 .contact_page h1 em {
   font-style: italic;
@@ -1570,61 +1571,20 @@ html {
 
 /* position, size and timing for each rune */
 .contact-rune:nth-child(1) {
-  font-size: clamp(3rem, 7vw, 6rem);
-  top: 8%;
-  left: 5%;
-  animation-duration: 14s;
-  animation-delay: 0s;
-  color: #f9ea54;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  top: 90%;
+  left: 30%;
+  animation-duration: 16s;
+  animation-delay: -3s;
 }
 .contact-rune:nth-child(2) {
-  font-size: clamp(2rem, 5vw, 4.5rem);
-  top: 55%;
-  left: 30%;
-  animation-duration: 18s;
-  animation-delay: -5s;
-  color: white;
-}
-
-.contact-rune:nth-child(3) {
   font-size: clamp(2rem, 4vw, 3.5rem);
   top: 15%;
   left: 60%;
   animation-duration: 16s;
   animation-delay: -3s;
 }
-.contact-rune:nth-child(4) {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  top: 88%;
-  left: 5%;
-  animation-duration: 12s;
-  animation-delay: -6s;
-  color: #ffb6c1;
-}
-.contact-rune:nth-child(5) {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  top: 85%;
-  left: 60%;
-  animation-duration: 22s;
-  animation-delay: -10s;
-  color: #9ac8f9;
-}
-.contact-rune:nth-child(6) {
-  top: 5%;
-  left: 90%;
-  animation-duration: 20s;
-  animation-delay: -8s;
-  width: 10%;
-  cursor: pointer;
-}
 
-.contact-rune:nth-child(6) img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  display: block;
-  cursor: pointer;
-}
 @keyframes rune-drift {
   0% {
     transform: translateY(0px) rotate(-1deg);
@@ -1726,7 +1686,10 @@ html {
   color: var(--rose-pale);
   font-weight: 500;
 }
-
+.info-value a {
+  color: white;
+  text-decoration: none;
+}
 /* Deco */
 .deco-star {
   margin-top: 3rem;
