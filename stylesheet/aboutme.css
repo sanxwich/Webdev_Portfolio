@@ -223,20 +223,29 @@
   user-select: none;
 }
 
+.hobby__quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 8px;
+}
+
 .quote {
   font-family: "DIN-bold";
-  font-weight: bold;
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 18px;
+  color: #ccc;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
   user-select: none;
 }
 
 .author {
   font-family: "DIN-bold";
-  font-weight: bold;
+  font-size: 16px;
   color: #b22222;
-  font-size: 20px;
-  margin-top: 10px;
+  margin: 0;
 }
 
 /* Glitch span - only targets .glitch class */
@@ -765,6 +774,7 @@
   font-weight: 800;
   font-family: "DIN-bold";
   margin: 0 0 10px 0;
+  text-align: center;
 }
 
 .skills__subtitle {
@@ -772,11 +782,14 @@
   font-size: 20px;
   margin: 0 0 50px 0;
   font-family: "DIN";
+  text-align: center;
 }
 
 .skills__cards {
   display: flex;
-  gap: 30px;
+  gap: 50px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 .skills__card {
@@ -836,6 +849,26 @@
   position: relative;
   z-index: 1;
 }
+.skills__icons-row {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-self: center;
+  font-size: 28px;
+  margin-top: 10px;
+}
+
+.skills__icons-row i {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.skills__icons-row i:hover {
+  transform: translateY(-4px);
+  opacity: 0.8;
+}
 /*hobbies*/
 .hobbies {
   width: 100%;
@@ -857,6 +890,7 @@
   margin: 0 0 10px 0;
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .hobbies__subtitle {
@@ -866,6 +900,7 @@
   font-family: "DIN";
   position: relative;
   z-index: 1;
+  text-align: center;
 }
 
 .hobbies__cards {
@@ -873,7 +908,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
   position: relative;
-  z-index: 1;
+  justify-self: center;
+  width: 70%;
 }
 
 .hobby__card {
