@@ -91,4 +91,30 @@ document.addEventListener("DOMContentLoaded", () => {
       changeBorderColor("right", pos);
     });
   }
+  // Music control
+  const music = document.getElementById("bg-music");
+  const musicBtn = document.getElementById("music-button");
+  const musicIcon = musicBtn.querySelector("i");
+  let isPlaying = false;
+
+  music.volume = 0.3;
+
+  // Toggle on music button click
+  if (musicBtn) {
+    musicBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // prevent triggering the document click above
+
+      if (isPlaying) {
+        music.pause();
+        musicIcon.classList.remove("fa-pause");
+        musicIcon.classList.add("fa-music");
+        isPlaying = false;
+      } else {
+        music.play().catch((err) => console.log("Autoplay blocked:", err));
+        musicIcon.classList.remove("fa-music");
+        musicIcon.classList.add("fa-pause");
+        isPlaying = true;
+      }
+    });
+  }
 });

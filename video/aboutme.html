@@ -12,6 +12,25 @@
     />
   </head>
   <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="/index.html">
+          <img
+            src="/images/icons8-honkai-star-rail-logo-100.png"
+            alt="hsr logo"
+          />
+        </a>
+      </div>
+      <div class="navbar-btns">
+        <a href="/index.html"><span>Home</span></a>
+        <button class="music-btn" id="music-button">
+          <span><i class="fa-solid fa-music"></i></span>
+        </button>
+      </div>
+    </nav>
+    <audio id="bg-music" loop preload="auto">
+      <source src="/audio/OST2.mp3" type="audio/mpeg" />
+    </audio>
     <main>
       <main>
         <section class="aboutMe" id="about">
@@ -281,6 +300,65 @@
         </section>
       </main>
     </main>
+    <footer class="Footer">
+      <div class="footer-bg"></div>
+      <div class="footer-mist"></div>
+      <div class="footer-glow"></div>
+      <div class="footer-top-border"></div>
+
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="brand-title">Dave <span>Bartolabac</span></div>
+          <div class="brand-sub">Software Engineer · Cebu</div>
+          <div class="brand-sigil">To Evernight's Star</div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="/index.html  ">Home</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:bartolabacdave_710@gmail.com"
+                >bartolabacdave_710@gmail.com</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/sanxwich" target="_blank"
+                >github.com/sanxwich</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/dave.bartolabac.2025"
+                target="_blank"
+                >Dave Bartolabac · Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="fdline"></div>
+        <div class="footer-emblem">✦ ✦ ✦ ✦ ✦</div>
+        <div class="fdline"></div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 <span>Dave Bartolabac</span>. All rights reserved.
+        </div>
+        <div class="footer-path">
+          @ 2023 <span>Honkai: Star Rail</span>. All rights reserved.
+        </div>
+      </div>
+    </footer>
     <script src="/aboutme.js"></script>
   </body>
 </html>
