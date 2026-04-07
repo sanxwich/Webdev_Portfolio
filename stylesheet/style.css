@@ -1128,7 +1128,7 @@ html {
 
 .section-head h1 {
   font-family: "DIN-bold";
-  font-size: 50px;
+  font-size: 150px;
   background: linear-gradient(135deg, #e85ca0, #00c8b0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1746,7 +1746,7 @@ html {
 .evernight-glitch img {
   position: relative;
   z-index: 1;
-  animation: glitch-main 4s infinite;
+  animation: glitch-main 3ms infinite;
 }
 
 /* Red channel shift */
