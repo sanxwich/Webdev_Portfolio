@@ -72,13 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    document.addEventListener("mousemove", (e) => {
+    function applyTilt(clientX) {
       let boxBoundingRect = card.getBoundingClientRect();
       let boxCenter = boxBoundingRect.left + boxBoundingRect.width / 2;
       let angle = Math.max(
         Math.min(
           21,
-          Math.atan2((e.pageX - boxCenter) * 0.002, Math.PI) * (180 / Math.PI),
+          Math.atan2((clientX - boxCenter) * 0.002, Math.PI) * (180 / Math.PI),
         ),
         -21,
       );
@@ -89,7 +89,21 @@ document.addEventListener("DOMContentLoaded", () => {
       let pos = 50 + (angle / 21) * 50;
       changeBorderColor("left", pos);
       changeBorderColor("right", pos);
+    }
+
+    // Desktop
+    document.addEventListener("mousemove", (e) => {
+      applyTilt(e.clientX);
     });
+
+    // Mobile — use the first touch point
+    document.addEventListener(
+      "touchmove",
+      (e) => {
+        applyTilt(e.touches[0].clientX);
+      },
+      { passive: true },
+    );
   }
   // Music control
   const music = document.getElementById("bg-music");
