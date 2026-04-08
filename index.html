@@ -13,12 +13,13 @@
   </head>
   <body>
     <section class="landing-cont" id="Home">
-      <video autoplay loop muted plays-inline class="background-video">
+      <video autoplay loop muted playsinline class="background-video">
         <source
           src="/video/Honkai_Star_Rail_-_Main_Loading_Screen_Live_Wallpaper_OST_720P.mp4"
           type="video/mp4"
         />
       </video>
+
       <nav class="navbar">
         <div class="logo">
           <a href="/index.html">
@@ -28,6 +29,7 @@
             />
           </a>
         </div>
+
         <div class="navbar-btns">
           <a href="/video/aboutme.html"><span>About</span></a>
           <button class="project-btn" onclick="scrollToSection('projects')">
@@ -40,13 +42,26 @@
             <span><i class="fa-solid fa-music"></i></span>
           </button>
         </div>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          onclick="toggleDrawer()"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
+
       <audio id="bg-music" loop preload="auto">
         <source
           src="/audio/Star Rail (Login Menu BGM) - Honkai_ Star Rail 1.0 OST.mp3"
           type="audio/mpeg"
         />
       </audio>
+
       <div class="content">
         <h1>
           <span class="trail" data-text="D">D</span>ave Star Rail: Portfolio
@@ -57,6 +72,45 @@
         </h2>
       </div>
     </section>
+
+    <!-- Overlay and Drawer OUTSIDE the section -->
+    <div
+      class="drawer-overlay"
+      id="drawer-overlay"
+      onclick="toggleDrawer()"
+    ></div>
+
+    <div class="drawer" id="drawer">
+      <button
+        class="drawer-close"
+        onclick="toggleDrawer()"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+      <nav class="drawer-links">
+        <a href="/video/aboutme.html">About</a>
+        <button
+          onclick="
+            toggleDrawer();
+            scrollToSection('projects');
+          "
+        >
+          Projects
+        </button>
+        <button
+          onclick="
+            toggleDrawer();
+            scrollToSection('contact');
+          "
+        >
+          Contacts
+        </button>
+        <button class="music-btn" id="music-button-mobile">
+          <i class="fa-solid fa-music"></i> Music
+        </button>
+      </nav>
+    </div>
     <main>
       <section class="Projects" id="projects">
         <div class="background-icons" id="bgIcons">

@@ -1,3 +1,13 @@
+function toggleDrawer() {
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("drawer-overlay");
+  const hamburger = document.getElementById("hamburger");
+
+  drawer.classList.toggle("open");
+  overlay.classList.toggle("open");
+  hamburger.classList.toggle("open");
+}
+
 function scrollToSection(id) {
   const section = document.getElementById(id);
   if (section) {
@@ -100,27 +110,46 @@ document.addEventListener("DOMContentLoaded", () => {
   // Music control
   const music = document.getElementById("bg-music");
   const musicBtn = document.getElementById("music-button");
+  const musicBtnMobile = document.getElementById("music-button-mobile");
   const musicIcon = musicBtn.querySelector("i");
+  const musicIconMobile = musicBtnMobile.querySelector("i");
   let isPlaying = false;
 
   music.volume = 0.3;
 
-  // Toggle on music button click
+  function toggleMusic() {
+    if (isPlaying) {
+      music.pause();
+      // desktop icon
+      musicIcon.classList.remove("fa-pause");
+      musicIcon.classList.add("fa-music");
+      // mobile icon
+      musicIconMobile.classList.remove("fa-pause");
+      musicIconMobile.classList.add("fa-music");
+      isPlaying = false;
+    } else {
+      music.play().catch((err) => console.log("Autoplay blocked:", err));
+      // desktop icon
+      musicIcon.classList.remove("fa-music");
+      musicIcon.classList.add("fa-pause");
+      // mobile icon
+      musicIconMobile.classList.remove("fa-music");
+      musicIconMobile.classList.add("fa-pause");
+      isPlaying = true;
+    }
+  }
+
   if (musicBtn) {
     musicBtn.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent triggering the document click above
+      e.stopPropagation();
+      toggleMusic();
+    });
+  }
 
-      if (isPlaying) {
-        music.pause();
-        musicIcon.classList.remove("fa-pause");
-        musicIcon.classList.add("fa-music");
-        isPlaying = false;
-      } else {
-        music.play().catch((err) => console.log("Autoplay blocked:", err));
-        musicIcon.classList.remove("fa-music");
-        musicIcon.classList.add("fa-pause");
-        isPlaying = true;
-      }
+  if (musicBtnMobile) {
+    musicBtnMobile.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMusic();
     });
   }
   document.querySelectorAll(".info-card[data-copy]").forEach((card) => {
