@@ -1628,6 +1628,7 @@ html {
   left: 30%;
   animation-duration: 16s;
   animation-delay: -3s;
+  color: #f480d2;
 }
 .contact-rune:nth-child(2) {
   font-size: clamp(2rem, 4vw, 3.5rem);
@@ -2503,6 +2504,7 @@ html {
     top: 98%;
     left: 10%;
     font-size: 1.2rem;
+    color: #f480d2;
   }
 
   .contact-rune:nth-child(2) {
