@@ -242,6 +242,7 @@ html {
 .hamburger {
   display: none;
 }
+
 .navbar {
   width: 821px;
   height: 94px;
@@ -2197,7 +2198,9 @@ html {
     transform: scale(1.3);
   }
 }
-
+.drawer {
+  display: none;
+}
 /* MOBILE */
 @media (max-width: 768px) {
   .content {
@@ -2270,11 +2273,6 @@ html {
     width: 60px;
   }
 
-  /* Hide desktop buttons on mobile */
-  .navbar-btns {
-    display: none;
-  }
-
   /* Hamburger button */
   .hamburger {
     display: flex;
@@ -2326,6 +2324,7 @@ html {
 
   /* Drawer */
   .drawer {
+    display: flex;
     position: fixed;
     top: 0;
     right: -280px; /* hidden off-screen to the right */
