@@ -2443,4 +2443,112 @@ html {
     animation-delay: -4s;
     opacity: 1;
   }
+  /*contact page*/
+
+  .Contact_page {
+    grid-template-columns: 1fr; /* stack columns */
+    padding: 1.5rem;
+    min-height: auto;
+  }
+
+  .panel {
+    padding-left: 0;
+    max-width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  .dline-contact {
+    display: flex;
+  }
+
+  .Contact_page h1 {
+    font-size: clamp(2rem, 10vw, 3rem);
+    white-space: normal;
+  }
+
+  .Contact_page .subtitle {
+    font-size: 0.95rem;
+    margin: 1rem 0 2rem;
+    max-width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(232, 48, 90, 0.3);
+    padding-left: 0;
+    padding-top: 1rem;
+  }
+
+  .info-cards {
+    width: 100%;
+  }
+  .info-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(245, 230, 234, 0.4);
+    margin-bottom: 1px;
+    display: flex;
+  }
+  .info-card {
+    padding: 0.85rem 1rem;
+  }
+  .Contact_page .section-head-contact {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  .image-panel {
+    height: 250px;
+  }
+
+  .contact-rune:nth-child(1) {
+    top: 98%;
+    left: 10%;
+    font-size: 1.2rem;
+  }
+
+  .contact-rune:nth-child(2) {
+    top: 68%;
+    left: 30%;
+    font-size: 1.2rem;
+  }
+  /* Footer mobile */
+  .Footer .footer-inner {
+    grid-template-columns: 1fr; /* stack all 3 columns */
+    gap: 2rem;
+    padding: 2.5rem 1.5rem 0;
+  }
+
+  .Footer .brand-title {
+    font-size: 1.5rem;
+  }
+
+  .Footer .footer-col-title {
+    margin-bottom: 0.8rem;
+  }
+
+  .Footer .footer-links {
+    gap: 0.5rem;
+  }
+
+  .Footer .footer-divider {
+    margin: 1.5rem auto 0;
+    padding: 0 1.5rem;
+  }
+
+  .Footer .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem 1.5rem 2rem;
+    gap: 0.4rem;
+  }
+
+  .Footer .footer-copy {
+    font-size: 0.72rem;
+  }
+
+  .Footer .footer-path {
+    font-size: 0.58rem;
+  }
+  .Footer .footer-bg {
+    background-position: 60% 30%;
+  }
 }
