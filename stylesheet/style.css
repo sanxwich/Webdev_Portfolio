@@ -2256,8 +2256,8 @@ html {
     }
   }
   .navbar {
-    width: 369px;
-    height: 82px;
+    width: 100%;
+    height: 72px;
     margin: 0;
     padding: 10px 16px;
     border-radius: 0;
@@ -2267,6 +2267,7 @@ html {
     position: fixed;
     z-index: 999;
     justify-content: space-between;
+    box-sizing: border-box;
   }
 
   .logo img {
