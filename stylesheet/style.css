@@ -2272,7 +2272,9 @@ html {
   .logo img {
     width: 60px;
   }
-
+  .navbar-btns {
+    display: none;
+  }
   /* Hamburger button */
   .hamburger {
     display: flex;
@@ -2388,5 +2390,57 @@ html {
     position: relative;
     overflow: hidden;
     transition: color 0.4s;
+  }
+  /* PROJECTS */
+
+  .section-head h1 {
+    font-size: 60px;
+  }
+  .bg-icon:nth-child(1) {
+    width: 80px;
+    left: 3%;
+    top: 2%;
+    animation-duration: 18s;
+    animation-delay: 0s;
+    opacity: 1;
+  }
+  .bg-icon:nth-child(2) {
+    width: 90px;
+    left: 75%;
+    top: 96%;
+    animation-duration: 22s;
+    animation-delay: -4s;
+    opacity: 1;
+  }
+  .bg-icon:nth-child(3) {
+    width: 70px;
+    left: 75%;
+    top: 18%;
+    animation-duration: 16s;
+    animation-delay: -2s;
+    opacity: 1;
+  }
+  .bg-icon:nth-child(4) {
+    display: none;
+  }
+  .bg-icon:nth-child(5) {
+    display: none;
+  }
+  .bg-icon:nth-child(6) {
+    display: none;
+  }
+  .bg-icon:nth-child(7) {
+    display: none;
+  }
+  .bg-icon:nth-child(8) {
+    display: none;
+  }
+  .bg-icon:nth-child(9) {
+    width: 90px;
+    left: 3%;
+    top: 80%;
+    animation-duration: 22s;
+    animation-delay: -4s;
+    opacity: 1;
   }
 }
