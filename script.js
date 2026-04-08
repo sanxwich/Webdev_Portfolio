@@ -171,27 +171,4 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch((err) => console.log("Copy failed:", err));
     });
   });
-  const rune = document.querySelector(".contact-rune:nth-child(6)");
-
-  const voiceLines = [
-    document.getElementById("vo1"),
-    document.getElementById("vo2"),
-    document.getElementById("vo3"),
-    document.getElementById("vo4"),
-    document.getElementById("vo5"),
-  ];
-
-  rune.addEventListener("click", () => {
-    // pick random audio
-    const randomVO = voiceLines[Math.floor(Math.random() * voiceLines.length)];
-
-    // stop all others (prevents overlap chaos)
-    voiceLines.forEach((vo) => {
-      vo.pause();
-      vo.currentTime = 0;
-    });
-
-    // play selected
-    randomVO.play();
-  });
 });
