@@ -2512,6 +2512,10 @@ html {
     left: 30%;
     font-size: 1.2rem;
   }
+  .gallery img {
+    width: 100%; /* images fill full width on small screens */
+    height: auto;
+  }
   /* Footer mobile */
   .Footer .footer-inner {
     grid-template-columns: 1fr; /* stack all 3 columns */
