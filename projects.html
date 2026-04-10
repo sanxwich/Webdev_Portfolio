@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects</title>
+    <link rel="stylesheet" href="/stylesheet/project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <section>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index.html">
+            <img
+              src="/images/icons8-honkai-star-rail-logo-100.png"
+              alt="hsr logo"
+            />
+          </a>
+        </div>
+        <div class="navbar-btns">
+          <a href="/index.html"><span>Home</span></a>
+          <a href="/video/aboutme.html"><span>About Me</span></a>
+          <a href="/contacts.html"><span>Contacts</span></a>
+
+          <button class="music-btn" id="music-button">
+            <span><i class="fa-solid fa-music"></i></span>
+          </button>
+        </div>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          onclick="toggleDrawer()"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <audio id="bg-music" loop preload="auto">
+        <source src="/audio/marchTheme.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <!-- Overlay and Drawer OUTSIDE the section -->
+    <div
+      class="drawer-overlay"
+      id="drawer-overlay"
+      onclick="toggleDrawer()"
+    ></div>
+
+    <div class="drawer" id="drawer">
+      <button
+        class="drawer-close"
+        onclick="toggleDrawer()"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+      <nav class="drawer-links">
+        <a href="/index.html">Home</a>
+        <a href="/video/aboutme.html">About Me</a>
+        <a href="/contacts.html">Contact</a>
+
+        <button class="music-btn" id="music-button-mobile">
+          <i class="fa-solid fa-music"></i> Music
+        </button>
+      </nav>
+    </div>
+
+    <main>
+      <section class="Projects" id="projects">
+        <div class="background-icons" id="bgIcons">
+          <img
+            src="/images/Ability_Freezing_Beauty.png"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/Ability_The_Power_of_Cuteness.png"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/the_Best_Girl_in_Sight.png"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/Character_March_7th_29_Eidolon_6.webp"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/Character_March_7th_29_Eidolon_4.webp"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/march 7th eidolen.webp"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/Ability_Frigid_Cold_Arrow.webp"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img src="/images/march e6.webp" alt="icon" class="bg-icon" />
+          <img
+            src="/images/Ability_The_Power_of_Cuteness.png"
+            alt="icon"
+            class="bg-icon"
+          />
+        </div>
+
+        <div class="section-head">
+          <div class="badge">✦ Portfolio ✦</div>
+          <h1>My Projects</h1>
+          <p>Ah! You're just in time — we haven't taken our selfie today.♡</p>
+          <div class="divider">
+            <div class="dline"></div>
+            <div class="ice_crystal">
+              <img src="/images/Type_Ice.webp" alt="ice" />
+            </div>
+            <div class="dline"></div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="project_card">
+            <img
+              class="card-img"
+              src="/images/kawaiiCount.png"
+              alt="Kawaii Count"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-pink">Inventory</span>
+                <span class="tag tag-teal">Java</span>
+              </div>
+              <div class="card-title">Kawaii Count</div>
+              <div class="card-desc">Your cutesy inventory manager!</div>
+              <div class="card-footer">
+                <a
+                  class="card-link"
+                  href="/projects/KawaiiCount.html"
+                  target="_self"
+                  >View Project</a
+                >
+                <div class="card-arrow">
+                  <i
+                    class="fa-solid fa-arrow-right"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project_card">
+            <img
+              class="card-img"
+              src="/images/KawaiiRecipe.png"
+              alt="Kawaii Recipes"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-pink">Recipes</span>
+                <span class="tag tag-mint">Web App</span>
+              </div>
+              <div class="card-title">Kawaii Recipes (in progress)</div>
+              <div class="card-desc">
+                Kawaii Count's official recipe collection!
+              </div>
+              <div class="card-footer">
+                <a
+                  class="card-link"
+                  href="/projects/KawaiiRecipe.html"
+                  target="_self"
+                  >View Project</a
+                >
+                <div class="card-arrow">
+                  <i
+                    class="fa-solid fa-arrow-right"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project_card">
+            <img
+              class="card-img"
+              src="/images/whackAwhack.png"
+              alt="Whack A Whack"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-blue">Game</span>
+                <span class="tag tag-teal">Java</span>
+              </div>
+              <div class="card-title">Whack A Whack</div>
+              <div class="card-desc">
+                A java final project meme whack-a-mole style arcade game!
+              </div>
+              <div class="card-footer">
+                <a
+                  class="card-link"
+                  href="/projects/WhackaWhack.html"
+                  target="_self"
+                  >View Project</a
+                >
+                <div class="card-arrow">
+                  <i
+                    class="fa-solid fa-arrow-right"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project_card chibi-card">
+            <img
+              class="chibi-img"
+              src="images/chibiMarch.png"
+              alt="March 7th chibi"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="Footer">
+      <div class="footer-bg"></div>
+      <div class="footer-mist"></div>
+      <div class="footer-glow"></div>
+      <div class="footer-top-border"></div>
+
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="brand-title">Dave <span>Bartolabac</span></div>
+          <div class="brand-sub">Software Engineer · Cebu</div>
+          <div class="brand-sigil">To Evernight's Star</div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="#home" onclick="scrollToSection('Home')">Home</a></li>
+            <li><a href="/video/aboutme.html">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contacts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:bartolabacdave_710@gmail.com"
+                >bartolabacdave_710@gmail.com</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/sanxwich" target="_blank"
+                >github.com/sanxwich</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/dave.bartolabac.2025"
+                target="_blank"
+                >Dave Bartolabac · Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="fdline"></div>
+        <div class="footer-emblem">✦ ✦ ✦ ✦ ✦</div>
+        <div class="fdline"></div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 <span>Dave Bartolabac</span>. All rights reserved.
+        </div>
+        <div class="footer-path">
+          @ 2023 <span>Honkai: Star Rail</span>. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="/project.js"></script>
+  </body>
+</html>

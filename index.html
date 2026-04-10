@@ -39,12 +39,9 @@
 
         <div class="navbar-btns">
           <a href="/video/aboutme.html"><span>About Me</span></a>
-          <button class="project-btn" onclick="scrollToSection('projects')">
-            <span>Projects</span>
-          </button>
-          <button class="contact-btn" onclick="scrollToSection('contact')">
-            <span>Contacts</span>
-          </button>
+          <a href="/projects.html"><span>Projects</span></a>
+          <a href="/contacts.html"><span>Contacts</span></a>
+
           <button class="music-btn" id="music-button">
             <span><i class="fa-solid fa-music"></i></span>
           </button>
@@ -74,8 +71,7 @@
           <span class="trail" data-text="D">D</span>ave Star Rail: Portfolio
         </h1>
         <h2>
-          <span class="trail_S" data-text="S">S</span>croll down for more
-          details
+          <span class="trail_S" data-text="U">U</span>se the navigation bar
         </h2>
       </div>
     </section>
@@ -97,191 +93,14 @@
       </button>
       <nav class="drawer-links">
         <a href="/video/aboutme.html">About</a>
-        <button
-          onclick="
-            toggleDrawer();
-            scrollToSection('projects');
-          "
-        >
-          Projects
-        </button>
-        <button
-          onclick="
-            toggleDrawer();
-            scrollToSection('contact');
-          "
-        >
-          Contacts
-        </button>
+        <a href="/projects.html"><span>Projects</span></a>
+        <a href="/contacts.html"><span>Contacts</span></a>
         <button class="music-btn" id="music-button-mobile">
           <i class="fa-solid fa-music"></i> Music
         </button>
       </nav>
     </div>
-    <main>
-      <section class="Projects" id="projects">
-        <div class="background-icons" id="bgIcons">
-          <img
-            src="/images/Ability_Freezing_Beauty.png"
-            alt="icon"
-            class="bg-icon"
-          />
-          <img
-            src="/images/Ability_The_Power_of_Cuteness.png"
-            alt="icon"
-            class="bg-icon"
-          />
-          <img
-            src="/images/the_Best_Girl_in_Sight.png"
-            alt="icon"
-            class="bg-icon"
-          />
-          <img
-            src="/images/Character_March_7th_29_Eidolon_6.webp"
-            alt="icon"
-            class="bg-icon"
-          />
 
-          <img
-            src="/images/Character_March_7th_29_Eidolon_4.webp"
-            alt="icon"
-            class="bg-icon"
-          />
-          <img
-            src="/images/march 7th eidolen.webp"
-            alt="icon"
-            class="bg-icon"
-          />
-          <img
-            src="/images/Ability_Frigid_Cold_Arrow.webp"
-            alt="icon"
-            class="bg-icon"
-          />
-          <img src="/images/march e6.webp" alt="icon" class="bg-icon" />
-          <img
-            src="/images/Ability_The_Power_of_Cuteness.png"
-            alt="icon"
-            class="bg-icon"
-          />
-        </div>
-
-        <div class="section-head">
-          <div class="badge">✦ Portfolio ✦</div>
-          <h1>My Projects</h1>
-          <p>Ah! You're just in time — we haven't taken our selfie today.♡</p>
-          <div class="divider">
-            <div class="dline"></div>
-            <div class="ice_crystal">
-              <img src="/images/Type_Ice.webp" alt="ice" />
-            </div>
-            <div class="dline"></div>
-          </div>
-        </div>
-
-        <div class="grid">
-          <div class="project_card">
-            <img
-              class="card-img"
-              src="/images/kawaiiCount.png"
-              alt="Kawaii Count"
-            />
-            <div class="card-body">
-              <div class="card-tags">
-                <span class="tag tag-pink">Inventory</span>
-                <span class="tag tag-teal">Java</span>
-              </div>
-              <div class="card-title">Kawaii Count</div>
-              <div class="card-desc">Your cutesy inventory manager!</div>
-              <div class="card-footer">
-                <a
-                  class="card-link"
-                  href="/projects/KawaiiCount.html"
-                  target="_blank"
-                  >View Project</a
-                >
-                <div class="card-arrow">
-                  <i
-                    class="fa-solid fa-arrow-right"
-                    style="color: rgb(255, 255, 255)"
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="project_card">
-            <img
-              class="card-img"
-              src="/images/KawaiiRecipe.png"
-              alt="Kawaii Recipes"
-            />
-            <div class="card-body">
-              <div class="card-tags">
-                <span class="tag tag-pink">Recipes</span>
-                <span class="tag tag-mint">Web App</span>
-              </div>
-              <div class="card-title">Kawaii Recipes (in progress)</div>
-              <div class="card-desc">
-                Kawaii Count's official recipe collection!
-              </div>
-              <div class="card-footer">
-                <a
-                  class="card-link"
-                  href="/projects/KawaiiRecipe.html"
-                  target="_blank"
-                  >View Project</a
-                >
-                <div class="card-arrow">
-                  <i
-                    class="fa-solid fa-arrow-right"
-                    style="color: rgb(255, 255, 255)"
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="project_card">
-            <img
-              class="card-img"
-              src="/images/whackAwhack.png"
-              alt="Whack A Whack"
-            />
-            <div class="card-body">
-              <div class="card-tags">
-                <span class="tag tag-blue">Game</span>
-                <span class="tag tag-teal">Java</span>
-              </div>
-              <div class="card-title">Whack A Whack</div>
-              <div class="card-desc">
-                A java final project meme whack-a-mole style arcade game!
-              </div>
-              <div class="card-footer">
-                <a
-                  class="card-link"
-                  href="/projects/WhackaWhack.html"
-                  target="_blank"
-                  >View Project</a
-                >
-                <div class="card-arrow">
-                  <i
-                    class="fa-solid fa-arrow-right"
-                    style="color: rgb(255, 255, 255)"
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="project_card chibi-card">
-            <img
-              class="chibi-img"
-              src="images/chibiMarch.png"
-              alt="March 7th chibi"
-            />
-          </div>
-        </div>
-      </section>
-    </main>
     <section class="Contact_page" id="contact">
       <div class="contact-runes" id="rune">
         <div class="contact-rune">SEE YOU TOMMOROW</div>

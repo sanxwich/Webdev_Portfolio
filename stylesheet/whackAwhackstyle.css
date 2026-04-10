@@ -95,9 +95,11 @@ h1 {
   font-family: "PIZZA", serif;
   font-weight: 900;
   font-style: italic;
-  font-size: 100px;
+  font-size: clamp(40px, 8vw, 100px);
   color: #c8b96a;
   margin-bottom: 6px;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .subtitle {
@@ -178,6 +180,18 @@ p {
   100% {
     transform: translateY(0);
   }
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
 }
 /* Footer */
 .Footer {
@@ -420,11 +434,18 @@ p {
   }
 
   h1 {
-    font-size: 32px; /* was 120px — way too big on mobile */
+    font-family: "PIZZA", serif;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 18px; /* scales down on smaller screens */
+    color: #c8b96a;
+    margin-bottom: 6px;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .subtitle {
-    font-size: 15px; /* was 30px */
+    font-size: 13px; /* was 30px */
   }
 
   h2 {
@@ -445,35 +466,38 @@ p {
     font-size: 13px;
   }
 
-  .gallery img {
-    width: 100%; /* images fill full width on small screens */
-    height: auto;
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
   }
-  /* Footer mobile */
+
+  .gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+  }
+
   /* Footer mobile */
   .Footer .footer-inner {
-    grid-template-columns: 1fr; /* stack all 3 columns */
+    grid-template-columns: 1fr;
     gap: 2rem;
     padding: 2.5rem 1.5rem 0;
   }
-
   .Footer .brand-title {
     font-size: 1.5rem;
   }
-
   .Footer .footer-col-title {
     margin-bottom: 0.8rem;
   }
-
   .Footer .footer-links {
     gap: 0.5rem;
   }
-
   .Footer .footer-divider {
     margin: 1.5rem auto 0;
     padding: 0 1.5rem;
   }
-
   .Footer .footer-bottom {
     flex-direction: column;
     align-items: center;
@@ -481,11 +505,9 @@ p {
     padding: 1rem 1.5rem 2rem;
     gap: 0.4rem;
   }
-
   .Footer .footer-copy {
     font-size: 0.72rem;
   }
-
   .Footer .footer-path {
     font-size: 0.58rem;
   }
