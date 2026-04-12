@@ -1,3 +1,13 @@
+function toggleDrawer() {
+  const drawer = document.getElementById("drawer");
+  const overlay = document.getElementById("drawer-overlay");
+  const hamburger = document.getElementById("hamburger");
+
+  drawer.classList.toggle("open");
+  overlay.classList.toggle("open");
+  hamburger.classList.toggle("open");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   // Stars generation
   function generateStars(n) {
@@ -20,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const s7 = document.getElementById("stars7");
   const s8 = document.getElementById("stars8");
   const s9 = document.getElementById("stars9");
+  const s10 = document.getElementById("stars10");
+  const s11 = document.getElementById("stars11");
+  const s12 = document.getElementById("stars12");
 
   if (s1)
     s1.style.cssText = `width:1px;height:1px;position:absolute;box-shadow:${generateStars(700)};animation:animStar 50s linear infinite;`;
@@ -39,7 +52,12 @@ document.addEventListener("DOMContentLoaded", () => {
     s8.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
   if (s9)
     s9.style.cssText = `width:3px;height:3px;position:absolute;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
-
+  if (s10)
+    s10.style.cssText = `width:1px;height:1px;position:absolute;top:0;left:0;box-shadow:${generateStars(700)};animation:animStar 50s linear infinite;`;
+  if (s11)
+    s11.style.cssText = `width:2px;height:2px;position:absolute;top:0;left:0;box-shadow:${generateStars(200)};animation:animStar 100s linear infinite;`;
+  if (s12)
+    s12.style.cssText = `width:3px;height:3px;position:absolute;top:0;left:0;box-shadow:${generateStars(100)};animation:animStar 150s linear infinite;`;
   // Footer stars
   const footer = document.querySelector(".Footer");
   if (footer) {
@@ -108,27 +126,46 @@ document.addEventListener("DOMContentLoaded", () => {
   // Music control
   const music = document.getElementById("bg-music");
   const musicBtn = document.getElementById("music-button");
+  const musicBtnMobile = document.getElementById("music-button-mobile");
   const musicIcon = musicBtn.querySelector("i");
+  const musicIconMobile = musicBtnMobile.querySelector("i");
   let isPlaying = false;
 
   music.volume = 0.3;
 
-  // Toggle on music button click
+  function toggleMusic() {
+    if (isPlaying) {
+      music.pause();
+      // desktop icon
+      musicIcon.classList.remove("fa-pause");
+      musicIcon.classList.add("fa-music");
+      // mobile icon
+      musicIconMobile.classList.remove("fa-pause");
+      musicIconMobile.classList.add("fa-music");
+      isPlaying = false;
+    } else {
+      music.play().catch((err) => console.log("Autoplay blocked:", err));
+      // desktop icon
+      musicIcon.classList.remove("fa-music");
+      musicIcon.classList.add("fa-pause");
+      // mobile icon
+      musicIconMobile.classList.remove("fa-music");
+      musicIconMobile.classList.add("fa-pause");
+      isPlaying = true;
+    }
+  }
+
   if (musicBtn) {
     musicBtn.addEventListener("click", (e) => {
-      e.stopPropagation(); // prevent triggering the document click above
+      e.stopPropagation();
+      toggleMusic();
+    });
+  }
 
-      if (isPlaying) {
-        music.pause();
-        musicIcon.classList.remove("fa-pause");
-        musicIcon.classList.add("fa-music");
-        isPlaying = false;
-      } else {
-        music.play().catch((err) => console.log("Autoplay blocked:", err));
-        musicIcon.classList.remove("fa-music");
-        musicIcon.classList.add("fa-pause");
-        isPlaying = true;
-      }
+  if (musicBtnMobile) {
+    musicBtnMobile.addEventListener("click", (e) => {
+      e.stopPropagation();
+      toggleMusic();
     });
   }
 });

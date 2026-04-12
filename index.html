@@ -39,9 +39,10 @@
 
         <div class="navbar-btns">
           <a href="/video/aboutme.html"><span>About Me</span></a>
-          <a href="/projects.html"><span>Projects</span></a>
+          <button class="project-btn" onclick="scrollToSection('projects')">
+            <span>Projects</span>
+          </button>
           <a href="/contacts.html"><span>Contacts</span></a>
-
           <button class="music-btn" id="music-button">
             <span><i class="fa-solid fa-music"></i></span>
           </button>
@@ -71,7 +72,7 @@
           <span class="trail" data-text="D">D</span>ave Star Rail: Portfolio
         </h1>
         <h2>
-          <span class="trail_S" data-text="U">U</span>se the navigation bar
+          <span class="trail_S" data-text="S">S</span>croll down to see more
         </h2>
       </div>
     </section>
@@ -93,80 +94,336 @@
       </button>
       <nav class="drawer-links">
         <a href="/video/aboutme.html">About</a>
-        <a href="/projects.html"><span>Projects</span></a>
-        <a href="/contacts.html"><span>Contacts</span></a>
+        <button class="project-btn" onclick="scrollToSection('projects')">
+          <span>Projects</span>
+        </button>
+        <a href="/contacts.html">Contacts</a>
         <button class="music-btn" id="music-button-mobile">
           <i class="fa-solid fa-music"></i> Music
         </button>
       </nav>
     </div>
 
-    <section class="Contact_page" id="contact">
-      <div class="contact-runes" id="rune">
-        <div class="contact-rune">SEE YOU TOMMOROW</div>
-        <div class="contact-rune">EVERNIGHT</div>
-      </div>
-
-      <div class="panel">
-        <div class="section-head-contact">
-          <div class="divider-contact">
-            <div class="dline-contact"></div>
-            <div class="remembrance_icon">
-              <img src="/images/squid_red.png" alt="remembrance" />
+    <main>
+      <section class="aboutMe" id="about">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div class="lightcone-container">
+          <div class="lightcone-card">
+            <img class="card-img" src="/images/dave_framed.jpg" />
+            <div class="card-instanse">
+              <div class="card-front-thick-wrapper">
+                <div class="card-thick-left card-thick-border"></div>
+                <div class="card-thick-mid card-thick-border"></div>
+                <div class="card-thick-right card-thick-border"></div>
+              </div>
+              <div class="card-front-thick-wrapper-back">
+                <div class="card-front-thick-wrapper back">
+                  <div class="card-thick-left card-thick-border"></div>
+                  <div class="card-thick-mid card-thick-border"></div>
+                  <div class="card-thick-right card-thick-border"></div>
+                </div>
+              </div>
+              <div class="card-front">
+                <div class="card-front-hud-wrapper">
+                  <div class="card-front-hud">
+                    <div class="card-hud-wrapper">
+                      <div class="card-hud-path">
+                        <img src="/images/Path_Elation.webp" />
+                      </div>
+                      <div class="card-hud-stars">
+                        <span class="hud-star">✦</span>
+                        <span class="hud-star">✦</span>
+                        <span class="hud-star">✦</span>
+                        <span class="hud-star">✦</span>
+                        <span class="hud-star">✦</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-blick-wrapper">
+                  <div class="card-blick"></div>
+                </div>
+                <div class="card-front-color-wrapper-wrapper">
+                  <div class="card-front-color-wrapper">
+                    <div class="card-front-color"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-back">
+                <div class="card-front-hud-wrapper">
+                  <div class="card-front-hud"></div>
+                </div>
+                <div class="card-blick-wrapper">
+                  <div class="card-blick"></div>
+                </div>
+              </div>
             </div>
-            <div class="dline-contact"></div>
+          </div>
+          <div class="lightcone_name">
+            <h2>Perfect Time</h2>
           </div>
         </div>
-        <h1>Contact Me</h1>
-        <p class="subtitle">A fateful encounter, wouldn't you say?</p>
-        <div class="info-cards">
-          <div class="info-card" data-copy="bartolabacdave_710@gmail.com">
-            <div class="info-icon">
-              <i class="fa-solid fa-envelope" style="color: #e64670"></i>
+        <div class="aboutMe__text">
+          <p>
+            Hello! I am
+            <span title="Dave Bartolabac" class="glitch">Dave Bartolabac</span>
+          </p>
+          <h3>I'm a Software Engineer</h3>
+          <p>
+            Currently, I'm studying Software Engineering at
+            <a href="https://www.facebook.com/iACADEMYCebu/">Iacademy Cebu.</a>
+            I'm passionate about learning web development because I love
+            creating engaging user-friendly websites. With a background in Web
+            Development and a keen eye for design, I strive to learn and build
+            digital experiences that are both visually appealing and highly
+            functional.
+          </p>
+          <a href="/video/aboutme.html" class="about-btn">
+            <span>Learn More About Me</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="skills">
+        <div id="stars4"></div>
+        <div id="stars5"></div>
+        <div id="stars6"></div>
+        <h2>Building Digital Experiences</h2>
+        <p class="skills__subtitle">
+          I specialize in creating stunning user interfaces and developing
+          high-quality applications that stand out.
+        </p>
+
+        <div class="skills__cards">
+          <div class="skills__card">
+            <div class="skills__card-header">
+              <span class="skills__icon">
+                <i
+                  class="fa-solid fa-laptop-code"
+                  style="color: rgb(97, 55, 214)"
+                ></i>
+              </span>
+              <h3>What I can do</h3>
             </div>
-            <div>
-              <div class="info-label">Email</div>
-              <div class="info-value">bartolabacdave_710@gmail.com</div>
-            </div>
-            <span class="copy-toast">Copied!</span>
+            <p>
+              I can help develop solutions that will help you grow your
+              business:
+            </p>
+            <ul>
+              <li><strong>UI/UX Design</strong></li>
+              <li><strong>Fullstack Web Development</strong></li>
+              <li><strong>Database Design</strong></li>
+            </ul>
           </div>
 
-          <div class="info-card">
-            <div class="info-icon">
-              <i class="fa-brands fa-github" style="color: #e64670"></i>
+          <div class="skills__card">
+            <div class="skills__card-header">
+              <span class="skills__icon">
+                <i
+                  class="fa-solid fa-layer-group"
+                  style="color: rgb(97, 55, 214)"
+                ></i>
+              </span>
+              <h3>Tools I Use</h3>
             </div>
-            <div>
-              <div class="info-label">Github</div>
-              <div class="info-value">
-                <a href="https://github.com/sanxwich"
-                  >https://github.com/sanxwich</a
+            <p>
+              I use the latest tools and technologies to build functional and
+              scalable products:
+            </p>
+            <ul>
+              <li>
+                <strong>Frontend:</strong> Tailwind CSS, React, TypeScript
+              </li>
+              <li><strong>Backend:</strong> Node.js, Fastify, PostgreSQL</li>
+              <li><strong>Design:</strong> Figma, Canva</li>
+              <li><strong>Version Control:</strong> Git, GitHub</li>
+            </ul>
+          </div>
+
+          <div class="skills__card">
+            <div class="skills__card-header">
+              <span class="skills__icon">
+                <i class="fa-brands fa-dev" style="color: rgb(97, 55, 214)"></i>
+              </span>
+              <h3>Core Technologies</h3>
+            </div>
+            <div class="skills__icons-row">
+              <i class="fa-brands fa-js" style="color: #ffd43b"></i>
+              <i class="fa-brands fa-css3-alt" style="color: #264de4"></i>
+              <i class="fa-brands fa-html5" style="color: #ffa500"></i>
+              <i class="fa-brands fa-react" style="color: #61dbfb"></i>
+              <i class="fa-brands fa-github" style="color: #74c0fc"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="Projects" id="projects">
+        <div class="background-icons" id="bgIcons">
+          <img
+            src="/images/Ability_Freezing_Beauty.png"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/Ability_The_Power_of_Cuteness.png"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/the_Best_Girl_in_Sight.png"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/Character_March_7th_29_Eidolon_6.webp"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/Character_March_7th_29_Eidolon_4.webp"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/march 7th eidolen.webp"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img
+            src="/images/Ability_Frigid_Cold_Arrow.webp"
+            alt="icon"
+            class="bg-icon"
+          />
+          <img src="/images/march e6.webp" alt="icon" class="bg-icon" />
+          <img
+            src="/images/Ability_The_Power_of_Cuteness.png"
+            alt="icon"
+            class="bg-icon"
+          />
+        </div>
+
+        <div class="section-head">
+          <div class="badge">✦ Portfolio ✦</div>
+          <h1>My Projects</h1>
+          <p>Ah! You're just in time — we haven't taken our selfie today.♡</p>
+          <div class="divider">
+            <div class="dline"></div>
+            <div class="ice_crystal">
+              <img src="/images/Type_Ice.webp" alt="ice" />
+            </div>
+            <div class="dline"></div>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="project_card">
+            <img
+              class="card-img"
+              src="/images/kawaiiCount.png"
+              alt="Kawaii Count"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-pink">Inventory</span>
+                <span class="tag tag-teal">Java</span>
+              </div>
+              <div class="card-title">Kawaii Count</div>
+              <div class="card-desc">Your cutesy inventory manager!</div>
+              <div class="card-footer">
+                <a
+                  class="card-link"
+                  href="/projects/KawaiiCount.html"
+                  target="_self"
+                  >View Project</a
                 >
+                <div class="card-arrow">
+                  <i
+                    class="fa-solid fa-arrow-right"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="info-card" data-copy="sanxwich">
-            <div class="info-icon">
-              <i class="fa-brands fa-discord" style="color: #e64670"></i>
+          <div class="project_card">
+            <img
+              class="card-img"
+              src="/images/KawaiiRecipe.png"
+              alt="Kawaii Recipes"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-pink">Recipes</span>
+                <span class="tag tag-mint">Web App</span>
+              </div>
+              <div class="card-title">Kawaii Recipes (in progress)</div>
+              <div class="card-desc">
+                Kawaii Count's official recipe collection!
+              </div>
+              <div class="card-footer">
+                <a
+                  class="card-link"
+                  href="/projects/KawaiiRecipe.html"
+                  target="_self"
+                  >View Project</a
+                >
+                <div class="card-arrow">
+                  <i
+                    class="fa-solid fa-arrow-right"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                </div>
+              </div>
             </div>
-            <div>
-              <div class="info-label">Discord</div>
-              <div class="info-value">sanxwich</div>
+          </div>
+
+          <div class="project_card">
+            <img
+              class="card-img"
+              src="/images/whackAwhack.png"
+              alt="Whack A Whack"
+            />
+            <div class="card-body">
+              <div class="card-tags">
+                <span class="tag tag-blue">Game</span>
+                <span class="tag tag-teal">Java</span>
+              </div>
+              <div class="card-title">Whack A Whack</div>
+              <div class="card-desc">
+                A java final project meme whack-a-mole style arcade game!
+              </div>
+              <div class="card-footer">
+                <a
+                  class="card-link"
+                  href="/projects/WhackaWhack.html"
+                  target="_self"
+                  >View Project</a
+                >
+                <div class="card-arrow">
+                  <i
+                    class="fa-solid fa-arrow-right"
+                    style="color: rgb(255, 255, 255)"
+                  ></i>
+                </div>
+              </div>
             </div>
-            <span class="copy-toast">Copied!</span>
+          </div>
+
+          <div class="project_card chibi-card">
+            <img
+              class="chibi-img"
+              src="images/chibiMarch.png"
+              alt="March 7th chibi"
+            />
           </div>
         </div>
+      </section>
+    </main>
 
-        <div class="deco-star">Child of Remembrance</div>
-      </div>
-
-      <div class="image-panel">
-        <div class="evernight-glitch">
-          <img src="/images/image-Photoroom (2).png" alt="Evernight" />
-          <div class="scanline"></div>
-        </div>
-      </div>
-    </section>
     <footer class="Footer">
       <div class="footer-bg"></div>
       <div class="footer-mist"></div>
@@ -186,7 +443,7 @@
             <li><a href="#home" onclick="scrollToSection('Home')">Home</a></li>
             <li><a href="/video/aboutme.html">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contacts</a></li>
+            <li><a href="/contacts.html">Contacts</a></li>
           </ul>
         </div>
 
@@ -229,6 +486,7 @@
         </div>
       </div>
     </footer>
+
     <script src="script.js"></script>
   </body>
 </html>

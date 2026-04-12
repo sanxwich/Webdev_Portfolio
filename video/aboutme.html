@@ -21,317 +21,212 @@
           />
         </a>
       </div>
+
       <div class="navbar-btns">
         <a href="/index.html"><span>Home</span></a>
-        <a href="/projects.html"><span>Projects</span></a>
-        <a href="/contacts.html"><span>Contact</span></a>
+
+        <a href="/contacts.html"><span>Contacts</span></a>
         <button class="music-btn" id="music-button">
           <span><i class="fa-solid fa-music"></i></span>
         </button>
       </div>
+
+      <button
+        class="hamburger"
+        id="hamburger"
+        onclick="toggleDrawer()"
+        aria-label="Open menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
+
     <audio id="bg-music" loop preload="auto">
       <source src="/audio/OST2.mp3" type="audio/mpeg" />
     </audio>
+
+    <div
+      class="drawer-overlay"
+      id="drawer-overlay"
+      onclick="toggleDrawer()"
+    ></div>
+
+    <div class="drawer" id="drawer">
+      <button
+        class="drawer-close"
+        onclick="toggleDrawer()"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+      <nav class="drawer-links">
+        <a href="/index.html">Home </a>
+
+        <a href="/contacts.html">Contacts</a>
+        <button class="music-btn" id="music-button-mobile">
+          <i class="fa-solid fa-music"></i> Music
+        </button>
+      </nav>
+    </div>
+
     <main>
-      <main>
-        <section class="aboutMe" id="about">
-          <div id="stars"></div>
-          <div id="stars2"></div>
-          <div id="stars3"></div>
-          <div class="lightcone-container">
-            <div class="lightcone-card">
-              <img class="card-img" src="/images/dave_framed.jpg" />
-              <div class="card-instanse">
-                <div class="card-front-thick-wrapper">
-                  <div class="card-thick-left card-thick-border"></div>
-                  <div class="card-thick-mid card-thick-border"></div>
-                  <div class="card-thick-right card-thick-border"></div>
-                </div>
-                <div class="card-front-thick-wrapper-back">
-                  <div class="card-front-thick-wrapper back">
-                    <div class="card-thick-left card-thick-border"></div>
-                    <div class="card-thick-mid card-thick-border"></div>
-                    <div class="card-thick-right card-thick-border"></div>
-                  </div>
-                </div>
-                <div class="card-front">
-                  <div class="card-front-hud-wrapper">
-                    <div class="card-front-hud">
-                      <div class="card-hud-wrapper">
-                        <div class="card-hud-path">
-                          <img src="/images/Path_Elation.webp" />
-                        </div>
-                        <div class="card-hud-stars">
-                          <span class="hud-star">✦</span>
-                          <span class="hud-star">✦</span>
-                          <span class="hud-star">✦</span>
-                          <span class="hud-star">✦</span>
-                          <span class="hud-star">✦</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="card-blick-wrapper">
-                    <div class="card-blick"></div>
-                  </div>
-                  <div class="card-front-color-wrapper-wrapper">
-                    <div class="card-front-color-wrapper">
-                      <div class="card-front-color"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-back">
-                  <div class="card-front-hud-wrapper">
-                    <div class="card-front-hud"></div>
-                  </div>
-                  <div class="card-blick-wrapper">
-                    <div class="card-blick"></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="lightcone_name">
-              <h2>Perfect Time</h2>
-            </div>
+      <section class="education">
+        <div id="stars10"></div>
+        <div id="stars11"></div>
+        <div id="stars12"></div>
+        <h2>Education</h2>
+        <p class="education__subtitle">Where my journey began</p>
+        <div class="education__card">
+          <div class="education__logo">
+            <img src="/images/images.png" alt="iACADEMY" />
           </div>
-          <div class="aboutMe__text">
-            <p>
-              Hello! I am
-              <span title="Dave Bartolabac" class="glitch"
-                >Dave Bartolabac</span
-              >
+          <div class="education__info">
+            <h3>iACADEMY Cebu</h3>
+            <p class="education__program">
+              Bachelor of Science in Software Engineering
             </p>
-            <h3>I'm a Software Engineer</h3>
+            <p class="education__year">2024 — Present</p>
+            <p class="education__desc">
+              Currently pursuing a degree focused on software development, and
+              web technologies. Building projects that blend functionality with
+              thoughtful design.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="hobbies">
+        <div id="stars7"></div>
+        <div id="stars8"></div>
+        <div id="stars9"></div>
+        <h2>Hobbies</h2>
+        <p class="hobbies__subtitle">Things I do when im not coding</p>
+        <div class="hobbies__cards">
+          <div class="hobby__card gaming">
+            <div class="hobby__card-header">
+              <span class="hobby__icon"
+                ><i
+                  class="fa-solid fa-gamepad"
+                  style="color: rgb(85, 49, 187)"
+                ></i
+              ></span>
+              <h3>Gaming</h3>
+            </div>
             <p>
-              Currently, I'm studying Software Engineering at
-              <a href="https://www.facebook.com/iACADEMYCebu/"
-                >Iacademy Cebu.</a
-              >
-              I'm passionate about learning web development because I love
-              creating engaging user-friendly websites. With a background in Web
-              Development and a keen eye for design, I strive to learn and build
-              digital experiences that are both visually appealing and highly
-              functional.
+              A great hobby to escape from reality. currently grinding Honkai
+              Star Rail.
             </p>
           </div>
 
-          <!--end of lightcone-->
-        </section>
-        <!--start of skills-->
-        <section class="skills">
-          <div id="stars4"></div>
-          <div id="stars5"></div>
-          <div id="stars6"></div>
-          <h2>Building Digital Experiences</h2>
-          <p class="skills__subtitle">
-            I specialize in creating stunning user interfaces and developing
-            high-quality applications that stand out.
+          <div class="hobby__card music">
+            <div class="hobby__card-header">
+              <span class="hobby__icon"
+                ><i
+                  class="fa-solid fa-music"
+                  style="color: rgb(85, 49, 187)"
+                ></i
+              ></span>
+              <h3>Listening to Music</h3>
+            </div>
+            <p>
+              I love listening to music even when im coding, commuting, vibing,
+              or just sleeping. I mostly listen to Jpop, osts, pop, EDM, and
+              even OPM.
+            </p>
+          </div>
+
+          <div class="hobby__card reading">
+            <div class="hobby__card-header">
+              <span class="hobby__icon"
+                ><i class="fa-solid fa-book" style="color: rgb(85, 49, 187)"></i
+              ></span>
+              <h3>Reading</h3>
+            </div>
+            <p>
+              I enjoy reading manga and light novels, especially shonen series.
+              It's a great way to escape from reality.
+            </p>
+          </div>
+
+          <div class="hobby__card collecting">
+            <div class="hobby__card-header">
+              <span class="hobby__icon"
+                ><i
+                  class="fa-solid fa-robot"
+                  style="color: rgb(85, 49, 187)"
+                ></i
+              ></span>
+              <h3>Anime & Gunpla</h3>
+            </div>
+            <p>
+              Collecting figures and building Gunpla kits helps me improve my
+              creativity and attention to detail, plus it's a fun way to unwind
+              and express my love for the gundam franchise.
+            </p>
+          </div>
+
+          <div class="hobby__card baking">
+            <div class="hobby__card-header">
+              <span class="hobby__icon"
+                ><i
+                  class="fa-solid fa-cookie"
+                  style="color: rgb(85, 49, 187)"
+                ></i
+              ></span>
+              <h3>Baking</h3>
+            </div>
+            <p>
+              I love baking sweet treats - from pancakes to cakes, it's my way
+              of improving my culinary skills and share my treats with others.
+            </p>
+          </div>
+
+          <div class="hobby__card cooking">
+            <div class="hobby__card-header">
+              <span class="hobby__icon"
+                ><i
+                  class="fa-solid fa-kitchen-set"
+                  style="color: rgb(85, 49, 187)"
+                ></i
+              ></span>
+              <h3>Cooking</h3>
+            </div>
+            <p>
+              I try to cook as much as I can — from simple meals to
+              experimenting with new recipes to share with my family or
+              sometimes friends.
+            </p>
+          </div>
+        </div>
+        <div class="hobby__quote">
+          <p class="quote">
+            "Don't worry, I'll watch over your path of Trailblaze... no matter
+            the cost."
           </p>
-
-          <div class="skills__cards">
-            <div class="skills__card">
-              <div class="skills__card-header">
-                <span class="skills__icon"
-                  ><i
-                    class="fa-solid fa-laptop-code"
-                    style="color: rgb(97, 55, 214)"
-                  ></i
-                ></span>
-                <h3>What I can do</h3>
-              </div>
-              <p>
-                I can help develop solutions that will help you grow your
-                business:
-              </p>
-              <ul>
-                <li><strong>UI/UX Design</strong></li>
-                <li><strong>Fullstack Web Development</strong></li>
-                <li><strong>Database Design</strong></li>
-              </ul>
-            </div>
-
-            <div class="skills__card">
-              <div class="skills__card-header">
-                <span class="skills__icon"
-                  ><i
-                    class="fa-solid fa-layer-group"
-                    style="color: rgb(97, 55, 214)"
-                  ></i
-                ></span>
-                <h3>Tools I Use</h3>
-              </div>
-              <p>
-                I use the latest tools and technologies to build functional and
-                scalable products:
-              </p>
-              <ul>
-                <li>
-                  <strong>Frontend:</strong> Tailwind CSS, React, TypeScript
-                </li>
-                <li><strong>Backend:</strong> Node.js, Fastify, PostgreSQL</li>
-                <li><strong>Design:</strong> Figma, Canva</li>
-                <li><strong>Version Control:</strong> Git, GitHub</li>
-              </ul>
-            </div>
-            <div class="skills__card">
-              <div class="skills__card-header">
-                <span class="skills__icon">
-                  <i
-                    class="fa-brands fa-dev"
-                    style="color: rgb(97, 55, 214)"
-                  ></i>
-                </span>
-                <h3>Core Technologies</h3>
-              </div>
-              <div class="skills__icons-row">
-                <i class="fa-brands fa-js" style="color: #ffd43b"></i>
-                <i class="fa-brands fa-css3-alt" style="color: #264de4"></i>
-                <i class="fa-brands fa-html5" style="color: #ffa500"></i>
-                <i class="fa-brands fa-react" style="color: #61dbfb"></i>
-                <i class="fa-brands fa-github" style="color: #74c0fc"></i>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="hobbies">
-          <div id="stars7"></div>
-          <div id="stars8"></div>
-          <div id="stars9"></div>
-
-          <h2>Hobbies</h2>
-          <p class="hobbies__subtitle">Things I do when im not coding</p>
-
-          <div class="hobbies__cards">
-            <div class="hobby__card gaming">
-              <div class="hobby__card-header">
-                <span class="hobby__icon"
-                  ><i
-                    class="fa-solid fa-gamepad"
-                    style="color: rgb(85, 49, 187)"
-                  ></i
-                ></span>
-                <h3>Gaming</h3>
-              </div>
-              <p>
-                A great hobby to escape from reality. currently grinding Honkai
-                Star Rail.
-              </p>
-            </div>
-
-            <div class="hobby__card music">
-              <div class="hobby__card-header">
-                <span class="hobby__icon"
-                  ><i
-                    class="fa-solid fa-music"
-                    style="color: rgb(85, 49, 187)"
-                  ></i
-                ></span>
-                <h3>Listening to Music</h3>
-              </div>
-              <p>
-                I love listening to music even when im coding, commuting,
-                vibing, or just sleeping. I mostly listen to Jpop, osts, pop,
-                EDM, and even OPM.
-              </p>
-            </div>
-
-            <div class="hobby__card reading">
-              <div class="hobby__card-header">
-                <span class="hobby__icon"
-                  ><i
-                    class="fa-solid fa-book"
-                    style="color: rgb(85, 49, 187)"
-                  ></i
-                ></span>
-                <h3>Reading</h3>
-              </div>
-              <p>
-                I enjoy reading manga and light novels, especially shonen series
-                . It's a great way to escape from reality.
-              </p>
-            </div>
-
-            <div class="hobby__card collecting">
-              <div class="hobby__card-header">
-                <span class="hobby__icon"
-                  ><i
-                    class="fa-solid fa-robot"
-                    style="color: rgb(85, 49, 187)"
-                  ></i
-                ></span>
-                <h3>Anime & Gunpla</h3>
-              </div>
-              <p>
-                Collecting figures and building Gunpla kits helps me improve my
-                creativity and attention to detail, plus it's a fun way to
-                unwind and express my love for the gundam franchise.
-              </p>
-            </div>
-
-            <div class="hobby__card baking">
-              <div class="hobby__card-header">
-                <span class="hobby__icon"
-                  ><i
-                    class="fa-solid fa-cookie"
-                    style="color: rgb(85, 49, 187)"
-                  ></i
-                ></span>
-                <h3>Baking</h3>
-              </div>
-              <p>
-                I love baking sweet treats - from pancakes to cakes, it's my way
-                of improving my culinary skills and share my treats with others.
-              </p>
-            </div>
-
-            <div class="hobby__card cooking">
-              <div class="hobby__card-header">
-                <span class="hobby__icon"
-                  ><i
-                    class="fa-solid fa-kitchen-set"
-                    style="color: rgb(85, 49, 187)"
-                  ></i
-                ></span>
-                <h3>Cooking</h3>
-              </div>
-              <p>
-                I try to cook as much as I can — from simple meals to
-                experimenting with new recipes to share with my family or
-                somethimes friends
-              </p>
-            </div>
-          </div>
-          <div class="hobby__quote">
-            <p class="quote">
-              "Don't worry, I'll watch over your path of Trailblaze... no matter
-              the cost."
-            </p>
-            <span class="author">— Evernight</span>
-          </div>
-        </section>
-      </main>
+          <span class="author">— Evernight</span>
+        </div>
+      </section>
     </main>
+
     <footer class="Footer">
       <div class="footer-bg"></div>
       <div class="footer-mist"></div>
       <div class="footer-glow"></div>
       <div class="footer-top-border"></div>
-
       <div class="footer-inner">
         <div class="footer-brand">
           <div class="brand-title">Dave <span>Bartolabac</span></div>
           <div class="brand-sub">Software Engineer · Cebu</div>
           <div class="brand-sigil">To Evernight's Star</div>
         </div>
-
         <div>
           <div class="footer-col-title">Navigate</div>
           <ul class="footer-links">
-            <li><a href="/index.html  ">Home</a></li>
+            <li><a href="/index.html">Home</a></li>
           </ul>
         </div>
-
         <div>
           <div class="footer-col-title">Contact</div>
           <ul class="footer-links">
@@ -355,13 +250,11 @@
           </ul>
         </div>
       </div>
-
       <div class="footer-divider">
         <div class="fdline"></div>
         <div class="footer-emblem">✦ ✦ ✦ ✦ ✦</div>
         <div class="fdline"></div>
       </div>
-
       <div class="footer-bottom">
         <div class="footer-copy">
           © 2026 <span>Dave Bartolabac</span>. All rights reserved.
@@ -371,6 +264,7 @@
         </div>
       </div>
     </footer>
+
     <script src="/aboutme.js"></script>
   </body>
 </html>

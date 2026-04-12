@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacts</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheet/contact.css" />
+  </head>
+  <body>
+    <section>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="/index.html">
+            <img
+              src="/images/icons8-honkai-star-rail-logo-100.png"
+              alt="hsr logo"
+            />
+          </a>
+        </div>
+        <div class="navbar-btns">
+          <a href="/index.html"><span>Home</span></a>
+          <a href="/video/aboutme.html"><span>About Me</span></a>
+
+          <button class="music-btn" id="music-button">
+            <span><i class="fa-solid fa-music"></i></span>
+          </button>
+        </div>
+
+        <button
+          class="hamburger"
+          id="hamburger"
+          onclick="toggleDrawer()"
+          aria-label="Open menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+
+      <audio id="bg-music" loop preload="auto">
+        <source src="/audio/evernight_theme.mp3" type="audio/mpeg" />
+      </audio>
+    </section>
+
+    <!-- Overlay and Drawer OUTSIDE the section -->
+    <div
+      class="drawer-overlay"
+      id="drawer-overlay"
+      onclick="toggleDrawer()"
+    ></div>
+
+    <div class="drawer" id="drawer">
+      <button
+        class="drawer-close"
+        onclick="toggleDrawer()"
+        aria-label="Close menu"
+      >
+        ✕
+      </button>
+      <nav class="drawer-links">
+        <a href="/index.html">Home</a>
+        <a href="/video/aboutme.html">About Me</a>
+
+        <button class="music-btn" id="music-button-mobile">
+          <i class="fa-solid fa-music"></i> Music
+        </button>
+      </nav>
+    </div>
+    <section class="Contact_page" id="contact">
+      <div class="contact-runes" id="rune">
+        <div class="contact-rune">SEE YOU TOMMOROW</div>
+        <div class="contact-rune">EVERNIGHT</div>
+      </div>
+
+      <div class="panel">
+        <div class="section-head-contact">
+          <div class="divider-contact">
+            <div class="dline-contact"></div>
+            <div class="remembrance_icon">
+              <img src="/images/squid_red.png" alt="remembrance" />
+            </div>
+            <div class="dline-contact"></div>
+          </div>
+        </div>
+        <h1>Contact Me</h1>
+        <p class="subtitle">A fateful encounter, wouldn't you say?</p>
+        <div class="info-cards">
+          <div class="info-card" data-copy="bartolabacdave_710@gmail.com">
+            <div class="info-icon">
+              <i class="fa-solid fa-envelope" style="color: #e64670"></i>
+            </div>
+            <div>
+              <div class="info-label">Email</div>
+              <div class="info-value">bartolabacdave_710@gmail.com</div>
+            </div>
+            <span class="copy-toast">Copied!</span>
+          </div>
+
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fa-brands fa-github" style="color: #e64670"></i>
+            </div>
+            <div>
+              <div class="info-label">Github</div>
+              <div class="info-value">
+                <a href="https://github.com/sanxwich"
+                  >https://github.com/sanxwich</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card" data-copy="sanxwich">
+            <div class="info-icon">
+              <i class="fa-brands fa-discord" style="color: #e64670"></i>
+            </div>
+            <div>
+              <div class="info-label">Discord</div>
+              <div class="info-value">sanxwich</div>
+            </div>
+            <span class="copy-toast">Copied!</span>
+          </div>
+        </div>
+
+        <div class="deco-star">Child of Remembrance</div>
+      </div>
+
+      <div class="image-panel">
+        <div class="evernight-glitch">
+          <img src="/images/image-Photoroom (2).png" alt="Evernight" />
+          <div class="scanline"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="Footer">
+      <div class="footer-bg"></div>
+      <div class="footer-mist"></div>
+      <div class="footer-glow"></div>
+      <div class="footer-top-border"></div>
+
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="brand-title">Dave <span>Bartolabac</span></div>
+          <div class="brand-sub">Software Engineer · Cebu</div>
+          <div class="brand-sigil">To Evernight's Star</div>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="#home" onclick="scrollToSection('Home')">Home</a></li>
+            <li><a href="/video/aboutme.html">About Me</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="footer-col-title">Contact</div>
+          <ul class="footer-links">
+            <li>
+              <a href="mailto:bartolabacdave_710@gmail.com"
+                >bartolabacdave_710@gmail.com</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/sanxwich" target="_blank"
+                >github.com/sanxwich</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/dave.bartolabac.2025"
+                target="_blank"
+                >Dave Bartolabac · Facebook</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-divider">
+        <div class="fdline"></div>
+        <div class="footer-emblem">✦ ✦ ✦ ✦ ✦</div>
+        <div class="fdline"></div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">
+          © 2026 <span>Dave Bartolabac</span>. All rights reserved.
+        </div>
+        <div class="footer-path">
+          @ 2023 <span>Honkai: Star Rail</span>. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
